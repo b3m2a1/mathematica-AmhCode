@@ -1,0 +1,447 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     15699,        438]
+NotebookOptionsPosition[     14168,        382]
+NotebookOutlinePosition[     14612,        399]
+CellTagsIndexPosition[     14569,        396]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Initialization Code", "Section",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.667766647497061*^9, {3.6677667951610727`*^9, 3.667766802871591*^9}, {
+   3.667768776531026*^9, 3.667768777483418*^9}, {3.667769192597437*^9, 
+   3.667769193662045*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SetDirectory", "@", 
+   RowBox[{"NotebookDirectory", "[", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"<<", "ChemPrimitives`"}]}], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.667766803842949*^9, 3.667766823929606*^9}, {
+  3.66778272441191*^9, 3.667782753945856*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Documentation", "Section",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{{3.667766682860145*^9, 3.667766691274764*^9}, {
+  3.668704548200385*^9, 3.668704549908379*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["ChemDataHolder", "Subsection",
+ CellChangeTimes->{{3.667766709362192*^9, 3.667766723303915*^9}}],
+
+Cell["\<\
+A collection of useful methods for working with atoms and molecules. Has \
+built-in data sets that help too.
+Default instance is called ChemData.\
+\>", "Text",
+ CellChangeTimes->{{3.667766747225389*^9, 3.6677667830247307`*^9}, {
+  3.667767063405664*^9, 3.667767073533386*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ChemData", "::", "Property"}], "[", 
+  RowBox[{"\"\<Ti\>\"", ",", "\"\<Color\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.667767054352182*^9, 3.667767098244836*^9}, {
+  3.667767146572151*^9, 3.667767155306478*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  ButtonBox[
+   TooltipBox[
+    GraphicsBox[{
+      {GrayLevel[0], RectangleBox[{0, 0}]}, 
+      {GrayLevel[0], RectangleBox[{1, -1}]}, 
+      {RGBColor[0.74902, 0.760784, 0.780392], RectangleBox[{0, -1}, {2, 1}]}},
+     
+     AspectRatio->1,
+     Frame->True,
+     FrameStyle->RGBColor[
+      0.4993466666666667, 0.5071893333333334, 0.5202613333333334],
+     FrameTicks->None,
+     ImageSize->
+      Dynamic[{Automatic, 1.35 CurrentValue["FontCapHeight"]/
+        AbsoluteCurrentValue[Magnification]}],
+     PlotRangePadding->None,
+     ImageCache->GraphicsData["CompressedBitmap", "\<\
+eJzN0UsKwjAQBuCJVTe9RE+jKw9RRNCFKNqV4qOgd6iPgqBURAVbK1g3vhXp
+oX4nPhAE9wYyhD8fA5OkdCObyetGLq1ryZJezObSZS1RKHGkCCJS5dZInsHH
+V1HBiyiCnj2Io9cfCFhdW8BdrsTzihRUayZG4yk8P6AoFss1Z64fYOhMYXVs
++sh6swVvFeB4CVnujjfO9ufwobn5l3T9NfanG8vt4coZe9n97+RnIukVHH5O
+5EzmrDcsuTtnnr/hl5t9yYbZfmjeFJNVoFIzhfyDNxJ3c43+hA==\
+\>"]],
+    "RGBColor[0.74902, 0.760784, 0.780392]"],
+   Appearance->None,
+   BaseStyle->{},
+   BaselinePosition->Baseline,
+   ButtonFunction:>With[{Typeset`box$ = EvaluationBox[]}, 
+     If[
+      Not[
+       AbsoluteCurrentValue["Deployed"]], 
+      SelectionMove[Typeset`box$, All, Expression]; 
+      FrontEnd`Private`$ColorSelectorInitialAlpha = 1; 
+      FrontEnd`Private`$ColorSelectorInitialColor = 
+       RGBColor[0.74902, 0.760784, 0.780392]; 
+      FrontEnd`Private`$ColorSelectorUseMakeBoxes = True; 
+      MathLink`CallFrontEnd[
+        FrontEnd`AttachCell[Typeset`box$, 
+         FrontEndResource["RGBColorValueSelector"], {0, {Left, Bottom}}, {
+         Left, Top}, 
+         "ClosingActions" -> {
+          "SelectionDeparture", "ParentChanged", "EvaluatorQuit"}]]]],
+   DefaultBaseStyle->{},
+   Evaluator->Automatic,
+   Method->"Preemptive"],
+  RGBColor[0.74902, 0.760784, 0.780392],
+  Editable->False,
+  Selectable->False]], "Output",
+ CellChangeTimes->{{3.667767087308037*^9, 3.667767099968136*^9}, {
+   3.667767142643738*^9, 3.667767181346054*^9}, 3.6677692749688377`*^9}]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Atom", "Subsection",
+ CellChangeTimes->{{3.6677667304417677`*^9, 3.667766749849537*^9}}],
+
+Cell["An atom class", "Text",
+ CellChangeTimes->{{3.6677672622003107`*^9, 3.667767272310803*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"A", "=", 
+   RowBox[{
+    RowBox[{"Atom", "::", "New"}], "[", 
+    RowBox[{"\"\<Ti\>\"", ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "1", ",", "1"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Graphics3D", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"A", "::", "DrawOb"}], "[", "]"}], ",", 
+     RowBox[{"Sphere", "[", "]"}]}], "}"}], ",", 
+   RowBox[{"Boxed", "\[Rule]", "False"}], ",", 
+   RowBox[{"Lighting", "\[Rule]", "\"\<Neutral\>\""}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.667767276241128*^9, 3.667767282014996*^9}, {
+  3.66776812477045*^9, 3.667768167849172*^9}, {3.667768215271784*^9, 
+  3.667768236289777*^9}, {3.667768946284762*^9, 3.667768950965904*^9}, {
+  3.667769386727852*^9, 3.667769407759082*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Molecule", "Subsection",
+ CellChangeTimes->{{3.667769450125411*^9, 3.6677694517561626`*^9}}],
+
+Cell["\<\
+A glorified atom list with other methods for various properties. Connectivity \
+not assured.\
+\>", "Text",
+ CellChangeTimes->{{3.667769473795731*^9, 3.667769522798361*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Complex", "Subsection",
+ CellChangeTimes->{{3.667769453364153*^9, 3.6677694546202803`*^9}}],
+
+Cell["\<\
+Takes two primitive types and chains them together. Allows for implementation \
+of bound species and for calculations of reduced masses and the like.\
+\>", "Text",
+ CellChangeTimes->{{3.667769527983035*^9, 3.66776956909303*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["ChemWrapper", "Subsection",
+ CellChangeTimes->{{3.6677694579076843`*^9, 3.6677694670598783`*^9}}],
+
+Cell["\<\
+Useful data types and functions for working with the primitives.\
+\>", "Text",
+ CellChangeTimes->{{3.6677695862212276`*^9, 3.667769612243737*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ArVCl", "=", 
+   RowBox[{
+    RowBox[{"ChemWrapper", "::", "CompoundMap"}], "[", "\"\<ArVCl\>\"", 
+    "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.667769614860878*^9, 3.667769623123686*^9}, {
+   3.667769938078438*^9, 3.667769955110314*^9}, 3.667774953223983*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ArVCl", "::", "Draw"}], "[", 
+  RowBox[{
+   RowBox[{"Update", "\[Rule]", "All"}], ",", 
+   RowBox[{"InertialAxes", "\[Rule]", "True"}], ",", 
+   RowBox[{"Rotate", "\[Rule]", "True"}], ",", 
+   RowBox[{"SphericalRegion", "\[Rule]", "True"}], ",", 
+   RowBox[{"PlotRange", "\[Rule]", "5"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.667769614860878*^9, 3.667769623123686*^9}, {
+   3.667769938078438*^9, 3.667769955110314*^9}, 3.667774953223983*^9, {
+   3.667776051393207*^9, 3.667776058426331*^9}, {3.6677761896735353`*^9, 
+   3.6677761906171494`*^9}, {3.667777994385044*^9, 3.667778001271278*^9}, {
+   3.667778122951848*^9, 3.667778123436269*^9}, {3.667780577738558*^9, 
+   3.667780578172531*^9}, {3.667782641786586*^9, 3.667782656425846*^9}, {
+   3.667783585717185*^9, 3.667783588211617*^9}, {3.6677845573336287`*^9, 
+   3.667784558673452*^9}, {3.667785471312014*^9, 3.66778547213483*^9}, {
+   3.66778577897992*^9, 3.667785784109364*^9}, {3.667786416226913*^9, 
+   3.66778641864854*^9}, {3.667786660867751*^9, 3.667786661299321*^9}, {
+   3.667786806497777*^9, 3.667786808600733*^9}, {3.667786869370738*^9, 
+   3.667786881472639*^9}, {3.66778702380554*^9, 3.667787095414119*^9}, {
+   3.6677871860117607`*^9, 3.667787186643766*^9}, {3.667788869266074*^9, 
+   3.667788869689678*^9}, {3.667790488621643*^9, 3.6677904909907417`*^9}, 
+   3.667790551173476*^9, {3.667790771972063*^9, 3.667790775770905*^9}, {
+   3.6677913175827436`*^9, 3.667791334428739*^9}, {3.66779136547438*^9, 
+   3.6677913846671543`*^9}, {3.667791426442565*^9, 3.6677914373846073`*^9}, {
+   3.667792068024199*^9, 3.667792069662326*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"With", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"a", "=", "#"}], "}"}], ",", 
+     RowBox[{"a", "::", "BondVector"}]}], "]"}], "&"}], "/@", 
+  RowBox[{
+   RowBox[{"ArVCl", "::", "GetAtoms"}], "[", "\"\<H\>\"", "]"}]}]], "Input",
+ CellChangeTimes->{{3.667824993030675*^9, 3.6678250144803333`*^9}, {
+  3.66782508258386*^9, 3.667825083410411*^9}, {3.667825153651908*^9, 
+  3.6678252633846493`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "0.02523011817232647`"}], ",", 
+     RowBox[{"-", "0.0031664070273142927`"}], ",", "0.`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "0.02523011817232647`"}], ",", 
+     RowBox[{"-", "0.0031664070273142927`"}], ",", "0.`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1.5091565958965742`", ",", 
+     RowBox[{"-", "0.0010564456396351535`"}], ",", "0.`"}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.667824998884848*^9, 3.667825014948316*^9}, {
+  3.6678250838693*^9, 3.667825091111464*^9}, {3.667825150410466*^9, 
+  3.667825263878173*^9}}]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"counter", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"reverse", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"With", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"c", "=", 
+      RowBox[{"ArVCl", "::", "Component1", "::", "Position"}]}], ",", 
+     RowBox[{"steps", "=", "15"}], ",", 
+     RowBox[{"orbits", "=", "3"}], ",", 
+     RowBox[{"steptime", "=", ".2"}]}], "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"RunScheduledTask", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"ArVCl", "::", "Rotate"}], "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"360", "/", "steps"}], ")"}], " ", "Degree"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<Component\>\"", ",", "2", ",", "All"}], "}"}], ",", 
+       RowBox[{"Axis", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "0", ",", "1"}], "}"}]}], ",", 
+       RowBox[{"Center", "\[Rule]", "1"}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"steptime", ",", 
+       RowBox[{"orbits", "*", "steps"}]}], "}"}]}], "]"}]}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"ArVCl", "::", "Rotate"}], "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"360", "/", "steps"}], ")"}], " ", "Degree"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"\"\<Component\>\"", ",", "2", ",", "\"\<H\>\""}], "}"}], 
+        ",", 
+        RowBox[{"Axis", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "1"}], "}"}]}], ",", 
+        RowBox[{"Center", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0"}], "}"}]}]}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"steptime", ",", 
+        RowBox[{"orbits", "*", "steps"}]}], "}"}]}], "]"}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"RunScheduledTask", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"ArVCl", "::", "Rotate"}], "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"360", "/", "steps"}], ")"}], " ", "Degree"}], ",", 
+        "\"\<Ar\>\"", ",", 
+        RowBox[{"Axis", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "0", ",", "0"}], "}"}]}], ",", 
+        RowBox[{"Center", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0"}], "}"}]}]}], "]"}], ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"steptime", ",", 
+          RowBox[{"orbits", "*", "steps"}]}], "}"}], "\[IndentingNewLine]", 
+        RowBox[{"AbsoluteTime", "[", "]"}]}], "+", 
+       RowBox[{"steptime", "*", 
+        RowBox[{"(", "orbits", ")"}], "*", "steps"}]}]}], "]"}], ";"}], 
+   "*)"}], "\[IndentingNewLine]", "]"}]}], "Input",
+ CellChangeTimes->{{3.6677780855269547`*^9, 3.667778098480036*^9}, {
+   3.66778024962192*^9, 3.667780289548442*^9}, 3.66778111204908*^9, {
+   3.667783625602809*^9, 3.667783638363377*^9}, {3.667783761905636*^9, 
+   3.667783792214244*^9}, {3.6677840468715887`*^9, 3.667784052863495*^9}, 
+   3.667784175765932*^9, {3.6677842147398357`*^9, 3.667784219835907*^9}, {
+   3.6677845143585787`*^9, 3.6677845699173326`*^9}, {3.66778486812889*^9, 
+   3.667784882751042*^9}, 3.667784919119608*^9, {3.667785020881168*^9, 
+   3.667785024728815*^9}, {3.667785060091033*^9, 3.667785070065427*^9}, {
+   3.667785150326786*^9, 3.667785151717058*^9}, {3.667785212594887*^9, 
+   3.6677852212494802`*^9}, {3.667785287228356*^9, 3.667785441255022*^9}, {
+   3.667785646322439*^9, 3.667785771170684*^9}, {3.667785811422489*^9, 
+   3.667785979921401*^9}, {3.667786036059658*^9, 3.667786338981235*^9}, {
+   3.6677868486837273`*^9, 3.667786848887876*^9}, {3.6677899104950523`*^9, 
+   3.667789920397603*^9}, {3.6677900158146477`*^9, 3.667790035188109*^9}, {
+   3.6677903683919067`*^9, 3.667790516445088*^9}, {3.6677905716118317`*^9, 
+   3.667790639904586*^9}, {3.6677906966614437`*^9, 3.6677907004291286`*^9}, {
+   3.667790733532392*^9, 3.6677907502186127`*^9}, {3.667791445104755*^9, 
+   3.6677915428612328`*^9}, {3.6677915775328407`*^9, 3.667791622803671*^9}, {
+   3.667791657361136*^9, 3.667791666063735*^9}, {3.667791737140665*^9, 
+   3.6677918007510653`*^9}, {3.6677918683166037`*^9, 
+   3.6677919409692583`*^9}, {3.667791976210658*^9, 3.6677919766068*^9}, {
+   3.6677921012842607`*^9, 3.667792101395792*^9}, {3.6678241811338797`*^9, 
+   3.6678241961277437`*^9}, {3.6678242745965853`*^9, 
+   3.6678243160977488`*^9}, {3.667824375264989*^9, 3.667824377007571*^9}}]
+}, Closed]]
+}, Closed]],
+
+Cell["Examples", "Section",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.667766647497061*^9, {3.66776669779453*^9, 3.667766701314631*^9}}],
+
+Cell["Tests", "Section",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.667766647497061*^9, {3.667766703378365*^9, 3.667766704898131*^9}}]
+},
+WindowSize->{914, 855},
+WindowMargins->{{58, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 10, \
+2015)",
+StyleDefinitions->FrontEnd`FileName[{
+   ParentDirectory[]}, "Interface Stylesheet.nb", CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 281, 6, 76, "Section"],
+Cell[864, 30, 321, 7, 55, "Input",
+ InitializationCell->True]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1222, 42, 197, 4, 76, "Section"],
+Cell[CellGroupData[{
+Cell[1444, 50, 102, 1, 48, "Subsection"],
+Cell[1549, 53, 286, 6, 33, "Text"],
+Cell[CellGroupData[{
+Cell[1860, 63, 251, 5, 20, "Input"],
+Cell[2114, 70, 2012, 51, 20, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[4175, 127, 94, 1, 48, "Subsection"],
+Cell[4272, 130, 97, 1, 47, "Text"],
+Cell[4372, 133, 812, 21, 55, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[5221, 159, 98, 1, 48, "Subsection"],
+Cell[5322, 162, 182, 4, 47, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[5541, 171, 97, 1, 48, "Subsection"],
+Cell[5641, 174, 238, 4, 20, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[5916, 183, 103, 1, 48, "Subsection"],
+Cell[6022, 186, 156, 3, 47, "Text"],
+Cell[6181, 191, 301, 7, 37, "Input"],
+Cell[6485, 200, 1635, 26, 55, "Input"],
+Cell[CellGroupData[{
+Cell[8145, 230, 453, 12, 37, "Input"],
+Cell[8601, 244, 655, 17, 40, "Output"]
+}, Open  ]],
+Cell[9271, 264, 4531, 102, 225, "Input"]
+}, Closed]]
+}, Closed]],
+Cell[13829, 370, 167, 4, 62, "Section"],
+Cell[13999, 376, 165, 4, 62, "Section"]
+}
+]
+*)
+
+(* End of internal cache information *)

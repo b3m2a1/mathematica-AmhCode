@@ -1,0 +1,272 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8696,        263]
+NotebookOptionsPosition[      7945,        233]
+NotebookOutlinePosition[      8301,        249]
+CellTagsIndexPosition[      8258,        246]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"MakeMutable", "[", 
+    RowBox[{"sym_Symbol", ",", 
+     RowBox[{"invisibleHeads", ":", "_List", ":", 
+      RowBox[{"{", "}"}]}]}], "]"}], ":=", 
+   RowBox[{"(", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"ClearAll", "@", "sym"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"SetAttributes", "[", 
+      RowBox[{"sym", ",", "HoldAll"}], "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"sym", "/:", 
+      RowBox[{"HoldPattern", "[", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"h", ":", 
+          RowBox[{"Alternatives", "@@", "invisibleHeads"}]}], ")"}], 
+        "\[IndentingNewLine]", "[", 
+        RowBox[{"f___", ",", 
+         RowBox[{"sym", "[", "s_Symbol", "]"}], ",", "l___"}], "]"}], "]"}], ":=", 
+      RowBox[{"h", "[", 
+       RowBox[{"f", ",", "s", ",", "l"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"sym", "/:", 
+      RowBox[{"HoldPattern", "[", 
+       RowBox[{
+        RowBox[{"sym", "[", "s_Symbol", "]"}], "[", "a___", "]"}], "]"}], ":=", 
+      RowBox[{"s", "[", "a", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"sym", "/:", 
+      RowBox[{"HoldPattern", "[", 
+       RowBox[{
+        RowBox[{"sym", "[", "s_Symbol", "]"}], "[", 
+        RowBox[{"[", "i___", "]"}], "]"}], "]"}], ":=", 
+      RowBox[{"s", "[", 
+       RowBox[{"[", "i", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"sym", "/:", 
+      RowBox[{"HoldPattern", "[", 
+       RowBox[{
+        RowBox[{"(", "h_", ")"}], "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"sym", "[", "s_Symbol", "]"}], "[", "a___", "]"}], ",", 
+         "o___"}], "]"}], "]"}], ":=", 
+      RowBox[{"h", "[", 
+       RowBox[{
+        RowBox[{"s", "[", "a", "]"}], ",", "o"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Unprotect", "[", "Part", "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Part", "/:", 
+      RowBox[{"HoldPattern", "[", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"h", ":", 
+          RowBox[{"Set", "|", "SetDelayed"}]}], ")"}], "[", 
+        RowBox[{
+         RowBox[{"Part", "[", 
+          RowBox[{
+           RowBox[{"sym", "[", "s_Symbol", "]"}], ",", "i__"}], "]"}], ",", 
+         "v_"}], "]"}], "]"}], ":=", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"h", "[", 
+         RowBox[{
+          RowBox[{"s", "[", 
+           RowBox[{"[", "i", "]"}], "]"}], ",", "v"}], "]"}], ";", 
+        RowBox[{"sym", "[", "s", "]"}]}], ")"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Protect", "[", "Part", "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"sym", "[", 
+       RowBox[{"e", ":", 
+        RowBox[{"Except", "[", 
+         RowBox[{"_Symbol", "|", "_Pattern", "|", "_Optional"}], "]"}]}], 
+       "]"}], ":=", 
+      RowBox[{"Module", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"mutable", "=", "e"}], "}"}], ",", 
+        RowBox[{"sym", "[", "mutable", "]"}]}], "]"}]}], ";", "\n", 
+     RowBox[{
+      RowBox[{"Format", "[", 
+       RowBox[{"sym", "[", "s_Symbol", "]"}], "]"}], ":=", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Interpretation", "[", 
+       RowBox[{"s", ",", 
+        RowBox[{"sym", "[", "s", "]"}]}], "]"}]}]}], "\[IndentingNewLine]", 
+    ")"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.675104454587644*^9, 3.6751045432444*^9}, {
+  3.675104594501699*^9, 3.67510461347023*^9}, {3.675104651150385*^9, 
+  3.6751046855088177`*^9}, {3.6751047777129507`*^9, 3.6751047823117533`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"MakeMutable", "[", 
+  RowBox[{"MList", ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "Times", ",", "List", ",", "AppendTo", ",", "PrependTo", ",", "Append", 
+     ",", "Prepend", ",", "Join"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.675104615467411*^9, 3.675104637483873*^9}, {
+  3.6751047093024673`*^9, 3.6751047648324757`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"MList", "[", 
+  RowBox[{"{", 
+   RowBox[{"1", ",", "2", ",", "3"}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.675104641332346*^9, 3.675104646475672*^9}, 
+   3.675104692363769*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  InterpretationBox[
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2", ",", "3"}], "}"}],
+   $CellContext`MList[$CellContext`mutable$18676]], "~", "AppendTo", "~", 
+  "1"}]], "Input",
+ CellChangeTimes->{{3.675104790184326*^9, 3.675104790190853*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"AppendTo", "::", "rvalue"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(\\*InterpretationBox[RowBox[{\\\"{\\\", \
+RowBox[{\\\"1\\\", \\\",\\\", \\\"2\\\", \\\",\\\", \\\"3\\\"}], \\\"}\\\"}], \
+MList[mutable$18676]]\\)\[NoBreak] is not a variable with a value, so its \
+value cannot be changed. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/rvalue\\\", ButtonNote -> \
+\\\"AppendTo::rvalue\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.675104790583836*^9}],
+
+Cell[BoxData[
+ RowBox[{"AppendTo", "[", 
+  RowBox[{
+   InterpretationBox[
+    RowBox[{"{", 
+     RowBox[{"1", ",", "2", ",", "3"}], "}"}],
+    $CellContext`MList[$CellContext`mutable$18676]], ",", "1"}], 
+  "]"}]], "Output",
+ CellChangeTimes->{3.675104790592346*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MList", "//", "UpValues"}]], "Input",
+ CellChangeTimes->{{3.675104797700083*^9, 3.675104800071649*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"HoldPattern", "[", 
+     RowBox[{"HoldPattern", "[", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"h", ":", 
+         RowBox[{"Alternatives", "@@", 
+          RowBox[{"{", 
+           RowBox[{
+           "Times", ",", "List", ",", "AppendTo", ",", "PrependTo", ",", 
+            "Append", ",", "Prepend", ",", "Join"}], "}"}]}]}], ")"}], "[", 
+       RowBox[{"f___", ",", 
+        RowBox[{"MList", "[", "s_Symbol", "]"}], ",", "l___"}], "]"}], "]"}], 
+     "]"}], "\[RuleDelayed]", 
+    RowBox[{"h", "[", 
+     RowBox[{"f", ",", "s", ",", "l"}], "]"}]}], ",", 
+   RowBox[{
+    RowBox[{"HoldPattern", "[", 
+     RowBox[{"HoldPattern", "[", 
+      RowBox[{
+       RowBox[{"MList", "[", "s_Symbol", "]"}], "\[LeftDoubleBracket]", 
+       "i___", "\[RightDoubleBracket]"}], "]"}], "]"}], "\[RuleDelayed]", 
+    RowBox[{"s", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}]}], 
+   ",", 
+   RowBox[{
+    RowBox[{"HoldPattern", "[", 
+     RowBox[{"HoldPattern", "[", 
+      RowBox[{"h_", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"MList", "[", "s_Symbol", "]"}], "[", "a___", "]"}], ",", 
+        "o___"}], "]"}], "]"}], "]"}], "\[RuleDelayed]", 
+    RowBox[{"h", "[", 
+     RowBox[{
+      RowBox[{"s", "[", "a", "]"}], ",", "o"}], "]"}]}]}], "}"}]], "Output",
+ CellChangeTimes->{3.675104800344184*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"MList", "[", 
+  RowBox[{"{", 
+   RowBox[{"1", ",", "2", ",", "4"}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{3.6751048646208687`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AppendTo", "[", 
+  RowBox[{
+   RowBox[{"MList", "[", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "2", ",", "3"}], "}"}], "]"}], ",", "1"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.675104831829088*^9, 3.675104843698042*^9}}],
+
+Cell[BoxData[
+ RowBox[{"MList", "[", 
+  RowBox[{"mutable$20168", ",", "1"}], "]"}]], "Output",
+ CellChangeTimes->{3.675104844156766*^9}]
+}, Open  ]]
+},
+WindowSize->{808, 755},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"10.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 10, \
+2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 3472, 88, 303, "Input"],
+Cell[4033, 110, 356, 8, 28, "Input"],
+Cell[4392, 120, 207, 5, 28, "Input"],
+Cell[CellGroupData[{
+Cell[4624, 129, 267, 7, 28, InheritFromParent],
+Cell[4894, 138, 626, 12, 24, "Message"],
+Cell[5523, 152, 266, 8, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5826, 165, 127, 2, 28, "Input"],
+Cell[5956, 169, 1388, 38, 97, "Output"]
+}, Open  ]],
+Cell[7359, 210, 159, 4, 28, "Input"],
+Cell[CellGroupData[{
+Cell[7543, 218, 247, 7, 28, "Input"],
+Cell[7793, 227, 136, 3, 28, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

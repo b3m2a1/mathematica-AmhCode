@@ -1,0 +1,19 @@
+#Status of ObjectOrientedProgramming package
+
+Generally functional.
+
+Improvements to be made:
+
+Add documentation generating function for a class/instance. Add some docstring type thing.
+
+Add option for light-weight class that has less support for different attribute types but 
+which requires less upkeep. Save this as LightWeight.m
+
+Potentially, allow for updating of methods of old classes and instances automatically when 
+the class is edited. Write code to sync two classes and pass changes to instances. Rely on
+the saved instance and class list.
+
+Add better support for multiple iheritance a la python.
+
+Consider making a new high-precedence, left-first overload operator. See if it is possible
+to hack this in dynamically.

@@ -1,0 +1,274 @@
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[         0,          0]
+NotebookDataLength[      7378,        273]
+NotebookOptionsPosition[      4997,        184]
+NotebookOutlinePosition[      5510,        204]
+CellTagsIndexPosition[      5467,        201]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Initialization Code", "Section",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.667766647497061*^9, {3.6677667951610727`*^9, 3.667766802871591*^9}, {
+   3.667768776531026*^9, 3.667768777483418*^9}, {3.667769192597437*^9, 
+   3.667769193662045*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Get", "@", 
+   RowBox[{"FileNameJoin", "@", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<DVRWrapper.m\>\""}], 
+     "}"}]}]}], ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.667766803842949*^9, 3.667766823929606*^9}, {
+  3.66778272441191*^9, 3.667782753945856*^9}, {3.668704571389266*^9, 
+  3.668704592731381*^9}, {3.668974739957547*^9, 3.668974740980019*^9}, {
+  3.669129387452071*^9, 3.669129389705249*^9}, {3.669162630549879*^9, 
+  3.6691626310838118`*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Documentation", "Section",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.667766647497061*^9, {3.668704515850252*^9, 3.668704518600988*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["DVRWrapper Class", "Subsection",
+ CellChangeTimes->{{3.6691294415847893`*^9, 3.6691294516150618`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Bound method: Init", "Subsubsection",
+ CellChangeTimes->{{3.669129620562757*^9, 3.669129644317525*^9}}],
+
+Cell["Describe", "Text",
+ CellChangeTimes->{{3.669129685397489*^9, 3.669129686988257*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Bound method: Initialize", "Subsubsection",
+ CellChangeTimes->{{3.669129691925364*^9, 3.669129696739976*^9}}],
+
+Cell["Called by Init to do the dirty work of initialization", "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Bound method: FindFile", "Subsubsection"],
+
+Cell["Finds files relative to the base directories the DVR holds", "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Bound property: LookupFile", "Subsubsection"],
+
+Cell["\<\
+Specifies a relatively unique file base based on the various DVR components \
+so that kinetic matrices and things can be imported rather than recalculated\
+\>", "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Bound properties: KineticMatrixFile, PotentialFile, WavefunctionsFile\
+\>", "Subsubsection"],
+
+Cell["\<\
+These use the previous two methods to find files to import and save to.\
+\>", "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Bound properties: LoadWavefunctions, LoadKineticMatrix, LoadPotentialMatrix\
+\>", "Subsubsection"],
+
+Cell["Pretty self explanatory", "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Bound method: FilePotential", "Subsubsection"],
+
+Cell["\<\
+Takes a .xlsx file and turns it into a potential energy matrix. File should \
+be formatted like Jimmy Yu and Gillian Lupinski did in their thesis projects.\
+\
+\>", "Text"]
+}, Closed]],
+
+Cell["Bound method: RunDVR", "Subsubsection"],
+
+Cell[CellGroupData[{
+
+Cell["Bound method: RunPotentialFile", "Subsubsection"],
+
+Cell["\<\
+Uses RunDVR to run, but taking a potential file as potential energy matrix\
+\>", "Text"]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["DVR  Subclasses", "Subsection",
+ CellChangeTimes->{{3.669129447895503*^9, 3.6691294542551327`*^9}}],
+
+Cell["\<\
+These all instantiate a different DVR type by routing to DVRWrapper.\
+\>", "Text",
+ CellChangeTimes->{{3.6691294574230633`*^9, 3.6691294753666*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["ProlateTopDVR", "Subsubsection",
+ CellChangeTimes->{{3.669129482567865*^9, 3.6691294862864237`*^9}}],
+
+Cell["ProlateTop description", "Text",
+ CellChangeTimes->{{3.669129487918371*^9, 3.669129505173861*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["PlanePointDVR", "Subsubsection",
+ CellChangeTimes->{{3.669129510487159*^9, 3.6691295130614777`*^9}}],
+
+Cell["PlanePointDVR description", "Text",
+ CellChangeTimes->{{3.6691295237517977`*^9, 3.669129526933031*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["RadialDVR", "Subsubsection",
+ CellChangeTimes->{{3.669129533871829*^9, 3.6691295359808693`*^9}}],
+
+Cell["(0,\[Infinity]) DVR", "Text",
+ CellChangeTimes->{{3.669129537628928*^9, 3.669129541868661*^9}, {
+  3.66912960028504*^9, 3.669129607785585*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Cartesian1DDVR", "Subsubsection",
+ CellChangeTimes->{{3.6691295464699907`*^9, 3.669129551516382*^9}}],
+
+Cell["(-\[Infinity],\[Infinity]) DVR", "Text",
+ CellChangeTimes->{{3.669129568674777*^9, 3.6691295864662647`*^9}}]
+}, Closed]]
+}, Closed]]
+}, Closed]],
+
+Cell["Examples", "Section",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.667766647497061*^9, {3.66870452403379*^9, 3.668704525376886*^9}}]
+},
+WindowSize->{808, 715},
+WindowMargins->{{110, Automatic}, {24, Automatic}},
+FrontEndVersion->"10.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 10, \
+2015)",
+StyleDefinitions->FrontEnd`FileName[{
+   ParentDirectory[
+    ParentDirectory[
+     ParentDirectory[]]], "Stylesheets"}, "Documentation Stylesheet.nb", 
+  CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[422, 15, 281, 6, 65, "Section"],
+Cell[706, 23, 559, 13, 37, "Input",
+ InitializationCell->True]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1302, 41, 173, 4, 51, "Section"],
+Cell[CellGroupData[{
+Cell[1500, 49, 108, 1, 48, "Subsection"],
+Cell[CellGroupData[{
+Cell[1633, 54, 109, 1, 52, "Subsubsection"],
+Cell[1745, 57, 90, 1, 48, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1872, 63, 115, 1, 44, "Subsubsection"],
+Cell[1990, 66, 69, 0, 48, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2096, 71, 47, 0, 44, "Subsubsection"],
+Cell[2146, 73, 74, 0, 47, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2257, 78, 51, 0, 44, "Subsubsection"],
+Cell[2311, 80, 178, 3, 65, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2526, 88, 102, 2, 44, "Subsubsection"],
+Cell[2631, 92, 95, 2, 47, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2763, 99, 108, 2, 44, "Subsubsection"],
+Cell[2874, 103, 39, 0, 47, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2950, 108, 52, 0, 44, "Subsubsection"],
+Cell[3005, 110, 181, 4, 65, "Text"]
+}, Closed]],
+Cell[3201, 117, 45, 0, 44, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[3271, 121, 55, 0, 44, "Subsubsection"],
+Cell[3329, 123, 98, 2, 47, "Text"]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[3476, 131, 105, 1, 48, "Subsection"],
+Cell[3584, 134, 158, 3, 47, "Text"],
+Cell[CellGroupData[{
+Cell[3767, 141, 106, 1, 46, "Subsubsection"],
+Cell[3876, 144, 104, 1, 47, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[4017, 150, 106, 1, 46, "Subsubsection"],
+Cell[4126, 153, 109, 1, 47, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[4272, 159, 102, 1, 46, "Subsubsection"],
+Cell[4377, 162, 149, 2, 47, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[4563, 169, 107, 1, 46, "Subsubsection"],
+Cell[4673, 172, 114, 1, 47, "Text"]
+}, Closed]]
+}, Closed]]
+}, Closed]],
+Cell[4826, 178, 167, 4, 51, "Section"]
+}
+]
+*)
+

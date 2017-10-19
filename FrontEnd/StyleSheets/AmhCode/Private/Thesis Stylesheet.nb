@@ -1,0 +1,847 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     25439,        838]
+NotebookOptionsPosition[     18674,        677]
+NotebookOutlinePosition[     19030,        693]
+CellTagsIndexPosition[     18987,        690]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[StyleData[StyleDefinitions -> FrontEnd`FileName[{"Book"}, "Textbook.nb", 
+  CharacterEncoding -> "UTF-8"]],
+ FontFamily->"Times",
+ FontSize->12,
+ FontWeight->"Plain",
+ FontSlant->"Plain"],
+
+Cell[CellGroupData[{
+
+Cell[StyleData[All],
+ PageWidth->PaperWidth,
+ CreateCellID->True,
+ TextJustification->0.],
+
+Cell[StyleData[All, "Printout"],
+ PageWidth->PaperWidth,
+ CreateCellID->True,
+ TextJustification->0.]
+}, Open  ]],
+
+Cell[StyleData["Author"],
+ FontFamily->"Times",
+ FontSize->12,
+ FontWeight->"Plain",
+ FontSlant->"Plain"],
+
+Cell[StyleData["Department"],
+ FontFamily->"Times",
+ FontSize->12,
+ FontWeight->"Plain",
+ FontSlant->"Plain"],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["Text"],
+ CellMargins->{{25, 12}, {3, 5}},
+ ReturnCreatesNewCell->False,
+ CellEventActions->{"KeyDown" :> (If[PreviousCell[] =!= None, 
+      If[Part[
+         NotebookRead[
+          PreviousCell[]], 2] === Part[
+         NotebookRead[
+          EvaluationCell[]], 2], With[{ids = {
+            Part[
+             Options[
+              PreviousCell[], CellID], 1, 2], 
+            Part[
+             Options[
+              EvaluationCell[], CellID], 1, 2]}}, 
+         With[{enb = EvaluationNotebook[], t = StringJoin[
+             ToString[
+              RandomInteger[{1000, 100000}]], 
+             RandomSample[
+              Alphabet[], 26]]}, Do[NotebookFind[
+              EvaluationNotebook[], id, All, CellID]; MathLink`CallFrontEnd[
+              FrontEnd`SelectionAddCellTags[enb, {t}]], {id, ids}]; 
+          NotebookLocate[t]; FrontEndTokenExecute["CellMerge"]; 
+          NotebookLocate[t]; MathLink`CallFrontEnd[
+            FrontEnd`SelectionRemoveCellTags[enb, {t}]]; Null]]; SelectionMove[
+         NextCell[], After, CellContents]]]; SetOptions[
+      EvaluationCell[], CellEventActions -> {}]), PassEventsDown -> True},
+ AutoIndent->True,
+ TextJustification->0.,
+ LineSpacing->{2, 3},
+ ParagraphIndent->30],
+
+Cell[StyleData["Text", "Printout"],
+ CellMargins->{{25, 12}, {3, 5}},
+ ReturnCreatesNewCell->False,
+ AutoIndent->True,
+ TextJustification->0.,
+ LineSpacing->{2, 3},
+ ParagraphIndent->30]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["Title"],
+ CellMargins->{{12, Inherited}, {10, 98}}],
+
+Cell[StyleData["Title", "Printout"],
+ CellMargins->{{12, Inherited}, {10, 98}}]
+}, Open  ]],
+
+Cell[StyleData["AcknowledgmentsSection"],
+ CellFrame->{{6, 0.5}, {0.5, 0.5}},
+ CellMargins->{{12, 12}, {98, 149}},
+ CellFrameMargins->3,
+ FontSize->16],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["Acknowledgements"],
+ CellMargins->{{35, 0}, {0, 0}},
+ LineSpacing->{1.5, 3}],
+
+Cell[StyleData["Acknowledgements", "Printout"],
+ CellMargins->{{35, 0}, {0, 0}},
+ LineSpacing->{1.5, 3}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["Section"],
+ CellFrame->{{0.5, 6}, {0.5, 0.5}},
+ ShowGroupOpener->True,
+ PageBreakAbove->True,
+ PageBreakWithin->False,
+ GroupPageBreakWithin->False,
+ CellEventActions->{"KeyDown" :> (NotebookWrite[
+      EvaluationNotebook[], 
+      Cell[
+       TextData[{
+         CounterBox["Section"], " "}], "Text", Editable -> False]]; SetOptions[
+      EvaluationCell[], CellEventActions -> DeleteCases[
+        Flatten[
+         AbsoluteOptions[
+          EvaluationCell[], CellEventActions]], "KeyDown" :> Blank[]]])},
+ CounterAssignments->{{"Subsection", 0}, {"Subsubsection", 0}, {"Item", 0}, {
+   "Subitem", 0}, {"Subsubitem", 0}, {"ItemNumbered", 0}, {
+   "SubitemNumbered", 0}, {"SubsubitemNumbered", 0}, {"Theorem", 0}},
+ Background->GrayLevel[0.95]],
+
+Cell[StyleData["Section", "Printout"],
+ CellFrame->{{0.5, 6}, {0.5, 0.5}},
+ ShowGroupOpener->False,
+ Background->GrayLevel[0.95]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["Subsection"],
+ CellFrame->{{0, 0}, {0.5, 0.5}},
+ ShowGroupOpener->True,
+ CellMargins->{{15, 12}, {0, 18}},
+ CellEventActions->{"KeyDown" :> (NotebookWrite[
+      EvaluationNotebook[], 
+      Cell[
+       TextData[{
+         CounterBox["Section"], ".", 
+         CounterBox["Subsection"], " "}], "Text", Editable -> False]]; 
+    SetOptions[
+      EvaluationCell[], CellEventActions -> DeleteCases[
+        Flatten[
+         AbsoluteOptions[
+          EvaluationCell[], CellEventActions]], "KeyDown" :> Blank[]]])},
+ CellFrameMargins->{{-3, 8}, {8, 8}},
+ CellFrameLabels->{{None, None}, {None, None}}],
+
+Cell[StyleData["Subsection", "Printout"],
+ CellFrame->{{0, 0}, {0.5, 0.5}},
+ ShowGroupOpener->False,
+ CellMargins->{{15, 12}, {0, 18}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["Subsubsection"],
+ CellFrame->{{0, 0}, {2, 0}},
+ ShowGroupOpener->True,
+ CellMargins->{{20, 12}, {3, 8}},
+ CellEventActions->{"KeyDown" :> (NotebookWrite[
+      EvaluationNotebook[], 
+      Cell[
+       TextData[{
+         CounterBox["Section"], ".", 
+         CounterBox["Subsection"], ".", 
+         CounterBox["Subsubsection"], " "}], "Text", Editable -> False]]; 
+    SetOptions[
+      EvaluationCell[], CellEventActions -> DeleteCases[
+        Flatten[
+         AbsoluteOptions[
+          EvaluationCell[], CellEventActions]], "KeyDown" :> Blank[]]])},
+ CellFrameMargins->2],
+
+Cell[StyleData["Subsubsection", "Printout"],
+ CellFrame->{{0, 0}, {2, 0}},
+ ShowGroupOpener->False,
+ CellMargins->{{20, 12}, {3, 8}},
+ CellFrameMargins->2]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["Subsubsubsection"],
+ CellMargins->{{25, 12}, {0, 6}},
+ FontVariations->{"Underline"->True}],
+
+Cell[StyleData["Subsubsubsection", "Printout"],
+ CellMargins->{{25, 12}, {0, 6}},
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.667869914734057*^9},
+ FontVariations->{"Underline"->True}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["HelperHeader", StyleDefinitions -> StyleData["Title"]],
+ DefaultNewCellStyle->"HelperInput",
+ MenuSortingValue->6100,
+ Background->GrayLevel[0.85]],
+
+Cell[StyleData["HelperHeader", "Printout", StyleDefinitions -> StyleData[
+ "Invisible"]]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["HelperSection", StyleDefinitions -> StyleData["Subsection"]],
+ DefaultNewCellStyle->"HelperInput",
+ MenuSortingValue->6200],
+
+Cell[StyleData["HelperSection", "Printout", StyleDefinitions -> StyleData[
+ "Invisible"]]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["HelperSubsection", StyleDefinitions -> StyleData[
+ "Subsubsection"]],
+ DefaultNewCellStyle->"HelperInput",
+ MenuSortingValue->6300],
+
+Cell[StyleData["HelperSubsection", "Printout", StyleDefinitions -> StyleData[
+ "Invisible"]]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["HelperInput", StyleDefinitions -> StyleData["Input"]],
+ DefaultNewCellStyle->"HelperOutput",
+ MenuSortingValue->6400],
+
+Cell[StyleData["HelperInput", "Printout", StyleDefinitions -> StyleData[
+ "Invisible"]]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["HelperOutput", StyleDefinitions -> StyleData["Output"]],
+ DefaultNewCellStyle->"HelperOutput",
+ MenuSortingValue->6500],
+
+Cell[StyleData["HelperOutput", "Printout", StyleDefinitions -> StyleData[
+ "Invisible"]]]
+}, Open  ]],
+
+Cell[StyleData["Epigraph"],
+ CellMargins->{{12, 54}, {10, 24}}],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["Theorem"],
+ CellFrame->{{3, 0}, {0, 0.5}},
+ CellMargins->{{45, 12}, {0, 15}},
+ ReturnCreatesNewCell->False,
+ TaggingRules:>{
+  "CounterSettings" -> {
+    "CounterFormat" -> {"Theorem"}, "CounterTarget" -> "Cell", "XRefPrefix" -> 
+     "Theorem"}},
+ PageBreakBelow->False,
+ CellEventActions->{"ReturnKeyDown" :> (CellPrint[
+      Cell["theorem", "TheoremContinuation"]]; SelectionMove[
+      NextCell[], All, CellContents])},
+ CellFrameLabels->{{None, 
+    TextData[{
+      CounterBox["Section"], ".", 
+      CounterBox["Theorem"]}]}, {None, None}},
+ Hyphenation->False,
+ ParagraphIndent->0,
+ LineIndent->4,
+ MenuCommandKey->"5",
+ "ReturnKeyCreatesNewCell" -> False],
+
+Cell[StyleData["Theorem", "Printout"],
+ CellFrame->{{3, 0}, {0, 0.5}},
+ CellMargins->{{45, 12}, {0, 15}},
+ ReturnCreatesNewCell->False,
+ TaggingRules:>{
+  "CounterSettings" -> {
+    "CounterFormat" -> {"Theorem"}, "CounterTarget" -> "Cell", "XRefPrefix" -> 
+     "Theorem"}},
+ GroupPageBreakWithin->False,
+ CellEventActions->{"ReturnKeyDown" :> (CellPrint[
+      Cell["theorem", "TheoremContinuation"]]; SelectionMove[
+      NextCell[], All, CellContents])},
+ CellFrameLabels->{{None, 
+    TextData[{
+      CounterBox["Section"], ".", 
+      CounterBox["Theorem"]}]}, {None, None}},
+ Hyphenation->False,
+ ParagraphIndent->0,
+ LineIndent->4,
+ "ReturnKeyCreatesNewCell" -> False],
+
+Cell[StyleData["TheoremContinuation", "Printout"],
+ CellFrame->{{3, 0}, {0, 0.5}},
+ CellMargins->{{45, 12}, {0, 0}},
+ ReturnCreatesNewCell->False,
+ CellEventActions->{"ReturnKeyDown" :> (CellPrint[
+      Cell["Proof:", "Proof"]]; SelectionMove[
+      NextCell[], All, CellContents])},
+ Hyphenation->False,
+ LineSpacing->{1.5, 3},
+ ParagraphIndent->15,
+ LineIndent->1.,
+ FontWeight->Plain,
+ FontSlant->"Plain"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["TheoremContinuation"],
+ CellFrame->{{3, 0}, {0., 0.5}},
+ CellMargins->{{45, 12}, {0, 0}},
+ ReturnCreatesNewCell->False,
+ PageBreakAbove->False,
+ GroupPageBreakWithin->False,
+ CellEventActions->{"ReturnKeyDown" :> (CellPrint[
+      Cell["Proof:", "Proof"]]; SelectionMove[
+      NextCell[], All, CellContents])},
+ ParagraphIndent->15,
+ FontWeight->Plain,
+ FontSlant->"Plain"],
+
+Cell[StyleData["Proof", "Printout"],
+ CellMargins->{{45, 12}, {0, 0}},
+ ParagraphIndent->0]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["Proof"],
+ CellFrame->{{3, 0}, {0, 0.5}},
+ CellMargins->{{45, 12}, {0, 0}},
+ ReturnCreatesNewCell->False,
+ CellEventActions->{"ReturnKeyDown" :> (CellPrint[
+      Cell["Proof", "ProofContinuation"]]; SelectionMove[
+      NextCell[], All, CellContents])},
+ ParagraphIndent->0,
+ LineIndent->1.,
+ MenuCommandKey->"6",
+ FontSlant->"Italic"],
+
+Cell[StyleData["ProofContinuation", "Printout"],
+ CellMargins->{{45, 12}, {8, 0}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["ProofContinuation"],
+ CellFrame->{{3, 0}, {0.5, 0.5}},
+ CellMargins->{{45, 12}, {8, 0}},
+ ReturnCreatesNewCell->False,
+ Hyphenation->False,
+ LineSpacing->{1.5, 3},
+ ParagraphIndent->15,
+ LineIndent->1.,
+ FontSlant->Plain],
+
+Cell[StyleData["Definition", "Printout"],
+ CellMargins->{{45, 12}, {0, 15}},
+ CellFrameLabels->{{None, 
+    TextData[{
+      CounterBox["Section"], ".", 
+      CounterBox["Theorem"]}]}, {None, None}},
+ ParagraphIndent->0,
+ CounterIncrements->"Theorem",
+ CounterSettings -> {
+  "CounterFormat" -> {"Theorem"}, "CounterTarget" -> "Cell", "XRefPrefix" -> 
+   "Theorem"}]
+}, Open  ]],
+
+Cell[StyleData["Definition"],
+ CellFrame->{{3, 0}, {0, 0.5}},
+ CellMargins->{{45, 12}, {0, 15}},
+ ReturnCreatesNewCell->False,
+ TaggingRules:>{
+  "CounterSettings" -> {
+    "CounterFormat" -> {"Theorem"}, "CounterTarget" -> "Cell", "XRefPrefix" -> 
+     "Theorem"}},
+ CellEventActions->{"ReturnKeyDown" :> (CellPrint[
+      Cell["def", "DefinitionContinuation"]]; SelectionMove[
+      NextCell[], All, CellContents])},
+ CellFrameLabels->{{None, 
+    TextData[{
+      CounterBox["Section"], ".", 
+      CounterBox["Theorem"]}]}, {None, None}},
+ CellChangeTimes->{3.6678706498301487`*^9},
+ LineSpacing->{1.5, 3},
+ ParagraphIndent->0,
+ LineIndent->1.,
+ CounterIncrements->"Theorem",
+ MenuCommandKey->"8",
+ FontSlant->"Italic"],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["DefinitionContinuation"],
+ CellFrame->{{3, 0}, {0.5, 0.5}},
+ CellMargins->{{45, 12}, {8, 0}},
+ ReturnCreatesNewCell->False,
+ Hyphenation->False,
+ LineSpacing->{1.5, 3},
+ ParagraphIndent->15,
+ LineIndent->1.,
+ FontSlant->Plain],
+
+Cell[StyleData["DefinitionContinuation", "Printout"],
+ CellMargins->{{45, 12}, {3, 0}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["Equation"],
+ CellMargins->{{100, 10}, {7, 7}},
+ ReturnCreatesNewCell->False,
+ LineIndent->0,
+ MenuCommandKey->None,
+ FontSlant->"Plain"],
+
+Cell[StyleData["Equation", "Printout"],
+ CellMargins->{{100, 10}, {7, 7}},
+ ReturnCreatesNewCell->True,
+ LineIndent->1.,
+ MenuCommandKey->None,
+ FontSlant->"Plain"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["EquationNumbered"],
+ CellFrame->{{0.5, 0.5}, {0, 0}},
+ CellMargins->{{90, 12}, {7, 7}},
+ ReturnCreatesNewCell->True,
+ LineIndent->1.,
+ MenuCommandKey->"None",
+ FontSlant->"Plain"],
+
+Cell[StyleData["Figure", "Printout"],
+ Editable->True,
+ CellMargins->{{100, 10}, {1, 7}},
+ TextAlignment->Center]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["Figure"],
+ Editable->True,
+ CellMargins->{{100, 10}, {1, 7}},
+ Deployed->True,
+ CellEventActions->{"MouseClicked" :> If[CurrentValue["MouseClickCount"] == 2, 
+     SetOptions[
+      EvaluationCell[], Deployed -> Not[
+        ReplaceAll[Deployed, 
+         AbsoluteOptions[
+          EvaluationCell[]]]]]], PassEventsDown -> True},
+ CellChangeTimes->{3.668114812963236*^9, 3.668115407921837*^9},
+ TextAlignment->Center],
+
+Cell[StyleData["FigureCaption", "Printout"],
+ CellFrame->{{3, 0}, {0.5, 0}},
+ WholeCellGroupOpener->False,
+ CellMargins->{{100, 10}, {7, 1}},
+ CellLabelPositioning->Automatic,
+ CellFrameLabels->{{
+    Cell[
+     TextData[{"Figure ", 
+       CounterBox["Figure"], ": "}]], None}, {None, None}}]
+}, Open  ]],
+
+Cell[StyleData["FigureCaption"],
+ CellFrame->{{3, 0}, {0.5, 0}},
+ WholeCellGroupOpener->False,
+ CellMargins->{{100, 10}, {7, 1}},
+ CellLabelPositioning->Automatic,
+ CellFrameLabels->{{
+    Cell[
+     TextData[{"Figure ", 
+       CounterBox["Figure"], ": "}]], None}, {None, None}}],
+
+Cell[StyleData["Input"],
+ DefaultNewCellStyle->"Input"],
+
+Cell[StyleData["Item1"],
+ CellMargins->{{Inherited, Inherited}, {Inherited, 10}},
+ PageBreakBelow->False,
+ DefaultNewCellStyle->"Item1Paragraph",
+ FontWeight->"Bold"],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["Item1Paragraph"],
+ ReturnCreatesNewCell->False,
+ DefaultNewCellStyle->"Item1",
+ LineSpacing->{2, 3},
+ ParagraphIndent->25],
+
+Cell[StyleData["Item1Paragraph", "Printout"],
+ ReturnCreatesNewCell->False,
+ LineSpacing->{2, 3},
+ ParagraphIndent->25]
+}, Open  ]],
+
+Cell[StyleData["Item2"],
+ CellMargins->{{Inherited, Inherited}, {Inherited, 10}},
+ PageBreakBelow->False,
+ DefaultNewCellStyle->"Item2Paragraph",
+ FontWeight->"Bold"],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["Item2Paragraph"],
+ CellMargins->{{56, 12}, {3, 8}},
+ ReturnCreatesNewCell->False,
+ DefaultNewCellStyle->"Item2",
+ LineSpacing->{2, 3},
+ ParagraphIndent->25],
+
+Cell[StyleData["Item2Paragraph", "Printout"],
+ LineSpacing->{2, 3},
+ ParagraphIndent->25]
+}, Open  ]],
+
+Cell[StyleData["Item3"],
+ CellMargins->{{Inherited, Inherited}, {Inherited, 10}},
+ PageBreakBelow->False,
+ DefaultNewCellStyle->"Item3Paragraph",
+ FontWeight->"Bold"],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["Item3Paragraph"],
+ ReturnCreatesNewCell->False,
+ DefaultNewCellStyle->"Item3",
+ LineSpacing->{2, 3},
+ ParagraphIndent->25],
+
+Cell[StyleData["Item3Paragraph", "Printout"],
+ ReturnCreatesNewCell->False,
+ LineSpacing->{2, 3},
+ ParagraphIndent->25],
+
+Cell[StyleData["Citation", "Working"],
+ CellMargins->{{25, 12}, {3, 5}},
+ ReturnCreatesNewCell->True,
+ CellGroupingRules->{"GroupTogetherNestedGrouping", 15000},
+ TaggingRules:>{
+  "CounterSettings" -> {
+    "CounterFormat" -> {"Citation"}, "CounterTarget" -> "Cell", "XRefPrefix" -> 
+     "Citation"}},
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellEventActions->(CellEventActions -> {"ReturnKeyDown" :> (CellPrint[
+       Cell["work", "Citation"]]; SelectionMove[
+       NextCell[], All, CellContents])}),
+ CellFrameLabels->{{
+    Cell[
+     TextData[{
+       CounterBox["Citation"], ". "}]], None}, {None, None}},
+ DefaultNewCellStyle->"Citation",
+ AutoIndent->False,
+ CellChangeTimes->{3.668027327150907*^9},
+ TextJustification->0.,
+ ParagraphIndent->0.,
+ CounterIncrements->"Citation",
+ MenuSortingValue->5000,
+ FontColor->GrayLevel[0]],
+
+Cell[StyleData["Citation", "Printout"],
+ CellMargins->{{25, 12}, {3, 5}},
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellEventActions->(CellEventActions -> {"ReturnKeyDown" :> (CellPrint[
+       Cell["work", "Citation"]]; SelectionMove[
+       NextCell[], All, CellContents])}),
+ CellFrameLabels->{{
+    Cell[
+     TextData[{
+       CounterBox["Citation"], ". "}]], None}, {None, None}},
+ AutoIndent->False,
+ CellChangeTimes->{3.668027327150907*^9},
+ TextJustification->0.,
+ ParagraphIndent->0,
+ CounterIncrements->"Citation",
+ FontColor->GrayLevel[0],
+ $CellContext`ReturnCreatesNewCell -> False],
+
+Cell[StyleData["Algorithm", "Working", StyleDefinitions -> StyleData["Text"]],
+ CellFrame->{{0.5, 0}, {0, 0}},
+ CellMargins->{{45, 12}, {1, 1}},
+ ReturnCreatesNewCell->False,
+ ConversionRules:>{"HTML" -> {{"", ""}, {"<p class=\"Equation\">", "</p>"}}},
+ TaggingRules:>{
+  "ExtraConversionRules" -> {"General" -> {"NestingLevel" -> 90}}},
+ CellHorizontalScrolling->True,
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ DefaultNewCellStyle->"Algorithm",
+ DefaultFormatType->TraditionalForm,
+ AutoIndent->False,
+ InputAutoReplacements->{},
+ CellChangeTimes->{3.66809658356671*^9},
+ TextJustification->0.,
+ ParagraphIndent->0.,
+ CounterIncrements->"Algorithm",
+ MenuSortingValue->6000,
+ FontColor->GrayLevel[0]],
+
+Cell[StyleData["Algorithm", "Printout", StyleDefinitions -> StyleData["Text"]],
+ CellFrame->{{0.5, 0}, {0, 0}},
+ CellMargins->{{45, 12}, {1, 1}},
+ ReturnCreatesNewCell->False,
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ DefaultNewCellStyle->"Algorithm",
+ DefaultFormatType->TraditionalForm,
+ AutoIndent->False,
+ CellChangeTimes->{3.66809658356671*^9},
+ TextJustification->0.,
+ ParagraphIndent->0.,
+ MenuSortingValue->6000,
+ FontColor->GrayLevel[0]]
+}, Open  ]],
+
+Cell[StyleData["Invisible"],
+ CellFrameColor->None,
+ CellSize->{1, 1},
+ TranslationOptions->{"BaseStyle"->None},
+ FontOpacity->0,
+ Background->None,
+ Open -> False],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["InlineCitation", StyleDefinitions -> StyleData["Text"]],
+ CellMargins->{{-2, 0}, {0, 0}},
+ Deployed->True,
+ CellBaseline->Bottom,
+ ParagraphIndent->0,
+ Magnification->0.8],
+
+Cell[StyleData["InlineCitation", "Printout", StyleDefinitions -> StyleData[
+ "Text"]],
+ CellMargins->{{-2, 0}, {0, 0}},
+ Deployed->True,
+ CellBaseline->Bottom,
+ ParagraphIndent->0,
+ FontSize->12,
+ Magnification->0.6]
+}, Open  ]],
+
+Cell[StyleData["CodeExample", StyleDefinitions -> StyleData["Input"]],
+ CellFrame->{{0.5, 0}, {0, 0}},
+ ShowAutoStyles->False]
+},
+WindowSize->{808, 755},
+WindowMargins->{{Automatic, 1}, {Automatic, 0}},
+FrontEndVersion->"10.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 10, \
+2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 192, 5, 36, 112, 1, "StyleData", "StyleDefinitions", ""],
+Cell[CellGroupData[{
+Cell[775, 29, 89, 3, 36, 20, 0, "StyleData", "All", "All"],
+Cell[867, 34, 101, 3, 30, 32, 0, "StyleData", "All", "Printout"]
+}, Open  ]],
+Cell[983, 40, 105, 4, 52, 25, 0, "StyleData", "Author", "All"],
+Cell[1091, 46, 109, 4, 28, 29, 0, "StyleData", "Department", "All"],
+Cell[CellGroupData[{
+Cell[1225, 54, 1244, 30, 36, 23, 0, "StyleData", "Text", "All"],
+Cell[2472, 86, 186, 6, 36, 35, 0, "StyleData", "Text", "Printout"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2695, 97, 67, 1, 160, 24, 0, "StyleData", "Title", "All"],
+Cell[2765, 100, 79, 1, 136, 36, 0, "StyleData", "Title", "Printout"]
+}, Open  ]],
+Cell[2859, 104, 151, 4, 286, 41, 0, "StyleData", "AcknowledgmentsSection", \
+"All"],
+Cell[CellGroupData[{
+Cell[3035, 112, 92, 2, 28, 35, 0, "StyleData", "Acknowledgements", "All"],
+Cell[3130, 116, 104, 2, 28, 47, 0, "StyleData", "Acknowledgements", "Printout"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3271, 123, 764, 18, 70, 26, 0, "StyleData", "Section", "All",
+ CounterAssignments->{{"Subsection", 0}, {"Subsubsection", 0}, {"Item", 0}, {
+   "Subitem", 0}, {"Subsubitem", 0}, {"ItemNumbered", 0}, {
+   "SubitemNumbered", 0}, {"SubsubitemNumbered", 0}, {"Theorem", 0}}],
+Cell[4038, 143, 129, 3, 61, 38, 0, "StyleData", "Section", "Printout"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4204, 151, 616, 16, 64, 29, 0, "StyleData", "Subsection", "All"],
+Cell[4823, 169, 135, 3, 63, 41, 0, "StyleData", "Subsection", "Printout"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4995, 177, 594, 16, 42, 32, 0, "StyleData", "Subsubsection", "All"],
+Cell[5592, 195, 155, 4, 45, 44, 0, "StyleData", "Subsubsection", "Printout"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5784, 204, 107, 2, 33, 35, 0, "StyleData", "Subsubsubsection", "All"],
+Cell[5894, 208, 209, 5, 34, 47, 0, "StyleData", "Subsubsubsection", "Printout"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6140, 218, 163, 3, 176, 71, 0, "StyleData", "HelperHeader", "All",
+ MenuSortingValue->6100],
+Cell[6306, 223, 89, 1, 20, 89, 1, "StyleData", "HelperHeader", "Printout"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6432, 229, 139, 2, 64, 77, 0, "StyleData", "HelperSection", "All",
+ MenuSortingValue->6200],
+Cell[6574, 233, 90, 1, 20, 90, 1, "StyleData", "HelperSection", "Printout"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6701, 239, 147, 3, 42, 85, 1, "StyleData", "HelperSubsection", "All",
+ MenuSortingValue->6300],
+Cell[6851, 244, 93, 1, 20, 93, 1, "StyleData", "HelperSubsection", \
+"Printout"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6981, 250, 133, 2, 43, 70, 0, "StyleData", "HelperInput", "All",
+ MenuSortingValue->6400],
+Cell[7117, 254, 88, 1, 20, 88, 1, "StyleData", "HelperInput", "Printout"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7242, 260, 135, 2, 43, 72, 0, "StyleData", "HelperOutput", "All",
+ MenuSortingValue->6500],
+Cell[7380, 264, 89, 1, 20, 89, 1, "StyleData", "HelperOutput", "Printout"]
+}, Open  ]],
+Cell[7484, 268, 63, 1, 62, 27, 0, "StyleData", "Epigraph", "All"],
+Cell[CellGroupData[{
+Cell[7572, 273, 681, 20, 51, 26, 0, "StyleData", "Theorem", "All",
+ MenuCommandKey->"5"],
+Cell[8256, 295, 677, 19, 51, 38, 0, "StyleData", "Theorem", "Printout"],
+Cell[8936, 316, 409, 12, 36, 50, 0, "StyleData", "TheoremContinuation", \
+"Printout"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9382, 333, 390, 11, 36, 38, 0, "StyleData", "TheoremContinuation", "All"],
+Cell[9775, 346, 91, 2, 28, 36, 0, "StyleData", "Proof", "Printout"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9903, 353, 351, 10, 36, 24, 0, "StyleData", "Proof", "All",
+ MenuCommandKey->"6"],
+Cell[10257, 365, 82, 1, 36, 48, 0, "StyleData", "ProofContinuation", \
+"Printout"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10376, 371, 237, 8, 53, 36, 0, "StyleData", "ProofContinuation", "All"],
+Cell[10616, 381, 367, 10, 43, 41, 0, "StyleData", "Definition", "Printout",
+ CounterIncrements->"Theorem"]
+}, Open  ]],
+Cell[10998, 394, 723, 21, 51, 29, 0, "StyleData", "Definition", "All",
+ CounterIncrements->"Theorem",
+ MenuCommandKey->"8"],
+Cell[CellGroupData[{
+Cell[11746, 419, 242, 8, 53, 41, 0, "StyleData", "DefinitionContinuation", \
+"All"],
+Cell[11991, 429, 87, 1, 31, 53, 0, "StyleData", "DefinitionContinuation", \
+"Printout"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12115, 435, 152, 5, 42, 27, 0, "StyleData", "Equation", "All",
+ MenuCommandKey->None],
+Cell[12270, 442, 164, 5, 42, 39, 0, "StyleData", "Equation", "Printout",
+ MenuCommandKey->None]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12471, 452, 195, 6, 42, 35, 0, "StyleData", "EquationNumbered", "All",
+ MenuCommandKey->"None"],
+Cell[12669, 460, 113, 3, 32, 37, 0, "StyleData", "Figure", "Printout"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12819, 468, 434, 11, 33, 25, 0, "StyleData", "Figure", "All"],
+Cell[13256, 481, 293, 8, 44, 44, 0, "StyleData", "FigureCaption", "Printout"]
+}, Open  ]],
+Cell[13564, 492, 281, 8, 41, 32, 0, "StyleData", "FigureCaption", "All"],
+Cell[13848, 502, 55, 1, 43, 24, 0, "StyleData", "Input", "All"],
+Cell[13906, 505, 166, 4, 42, 24, 0, "StyleData", "Item1", "All"],
+Cell[CellGroupData[{
+Cell[14097, 513, 138, 4, 31, 33, 0, "StyleData", "Item1Paragraph", "All"],
+Cell[14238, 519, 119, 3, 30, 45, 0, "StyleData", "Item1Paragraph", \
+"Printout"]
+}, Open  ]],
+Cell[14372, 525, 166, 4, 42, 24, 0, "StyleData", "Item2", "All"],
+Cell[CellGroupData[{
+Cell[14563, 533, 172, 5, 39, 33, 0, "StyleData", "Item2Paragraph", "All"],
+Cell[14738, 540, 89, 2, 30, 45, 0, "StyleData", "Item2Paragraph", "Printout"]
+}, Open  ]],
+Cell[14842, 545, 166, 4, 42, 24, 0, "StyleData", "Item3", "All"],
+Cell[CellGroupData[{
+Cell[15033, 553, 138, 4, 31, 33, 0, "StyleData", "Item3Paragraph", "All"],
+Cell[15174, 559, 119, 3, 30, 45, 0, "StyleData", "Item3Paragraph", "Printout"],
+Cell[15296, 564, 850, 24, 36, 38, 0, "StyleData", "Citation", "Working",
+ CounterIncrements->"Citation",
+ MenuSortingValue->5000],
+Cell[16149, 590, 603, 17, 36, 39, 0, "StyleData", "Citation", "Printout",
+ CounterIncrements->"Citation"],
+Cell[16755, 609, 708, 19, 30, 78, 0, "StyleData", "Algorithm", "Working",
+ CounterIncrements->"Algorithm",
+ MenuSortingValue->6000],
+Cell[17466, 630, 453, 13, 30, 79, 0, "StyleData", "Algorithm", "Printout",
+ MenuSortingValue->6000]
+}, Open  ]],
+Cell[17934, 646, 164, 6, 20, 28, 0, "StyleData", "Invisible", "All"],
+Cell[CellGroupData[{
+Cell[18123, 656, 187, 5, 26, 72, 0, "StyleData", "InlineCitation", "All"],
+Cell[18313, 663, 216, 7, 23, 86, 1, "StyleData", "InlineCitation", \
+"Printout"]
+}, Open  ]],
+Cell[18544, 673, 126, 2, 43, 70, 0, "StyleData", "CodeExample", "All"]
+}
+]
+*)
+
+(* End of internal cache information *)

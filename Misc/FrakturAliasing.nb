@@ -1,0 +1,181 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8084,        172]
+NotebookOptionsPosition[      3932,        104]
+NotebookOutlinePosition[      8186,        174]
+CellTagsIndexPosition[      8143,        171]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"resetAliases", "[", "]"}], ":=", 
+     RowBox[{"SetOptions", "[", 
+      RowBox[{
+       RowBox[{"EvaluationNotebook", "[", "]"}], ",", 
+       RowBox[{"InputAliases", "\[Rule]", 
+        RowBox[{"{", "}"}]}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"addAlias", "[", 
+     RowBox[{"alias_", ",", "arg_"}], "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"SetOptions", "[", 
+        RowBox[{
+         RowBox[{"EvaluationNotebook", "[", "]"}], ",", 
+         RowBox[{"InputAliases", "\[Rule]", 
+          RowBox[{"Join", "[", 
+           RowBox[{
+            RowBox[{"InputAliases", "/.", 
+             RowBox[{"Options", "[", 
+              RowBox[{
+               RowBox[{"EvaluationNotebook", "[", "]"}], ",", 
+               "InputAliases"}], "]"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"alias", "\[Rule]", "arg"}], "}"}]}], "]"}]}]}], "]"}], 
+       ";"}]}], "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"aliasAt", "[", "n_", "]"}], ":=", 
+    RowBox[{"Module", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+        "letters", "=", 
+         "\"\<ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz\>\""}], 
+        ",", "l", ",", "al", ",", "ar"}], "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"l", "=", 
+        RowBox[{"StringTake", "[", 
+         RowBox[{"letters", ",", 
+          RowBox[{"{", "n", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"al", "=", 
+        RowBox[{"\"\<fr\>\"", "<>", "l"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"ar", "=", 
+        RowBox[{"RowBox", "[", 
+         RowBox[{"{", 
+          RowBox[{"StyleBox", "[", 
+           RowBox[{"l", ",", 
+            RowBox[{"FontFamily", "\[Rule]", "\"\<Alte Schwabacher\>\""}]}], 
+           "]"}], "}"}], "]"}]}], " ", ";", "\[IndentingNewLine]", 
+       RowBox[{"addAlias", "[", 
+        RowBox[{"al", ",", "ar"}], "]"}], ";"}]}], "\[IndentingNewLine]", 
+     "]"}]}], "\n", 
+   RowBox[{"resetAliases", "[", "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Module", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"i", "=", "0"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"For", "[", 
+       RowBox[{
+        RowBox[{"i", "=", "1"}], ",", 
+        RowBox[{"i", "\[LessEqual]", 
+         RowBox[{"26", "*", "2"}]}], ",", 
+        RowBox[{"i", "++"}], ",", 
+        RowBox[{"aliasAt", "[", "i", "]"}]}], "]"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"addAlias", "[", 
+       RowBox[{"\"\<drT\>\"", ",", "\"\<\[DoubleRightTee]\>\""}], "]"}], 
+      ";"}]}], "\[IndentingNewLine]", "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.639093356275784*^9, 3.639093450987639*^9}, {
+  3.639093519225801*^9, 3.639093546359611*^9}, {3.63909401939612*^9, 
+  3.6390940554562407`*^9}, {3.639094104881126*^9, 3.639094156494645*^9}, {
+  3.639094231793289*^9, 3.63909427407133*^9}, {3.639094348078326*^9, 
+  3.639094402806074*^9}, {3.639094631788618*^9, 3.639094653777183*^9}, {
+  3.63909472783351*^9, 3.639094803738584*^9}, {3.639094835126326*^9, 
+  3.639094854012282*^9}}]
+},
+WindowSize->{808, 756},
+WindowMargins->{{Automatic, 189}, {Automatic, 0}},
+InputAliases->{"frA" -> RowBox[{
+     StyleBox["A", FontFamily -> "Alte Schwabacher"]}], "frB" -> RowBox[{
+     StyleBox["B", FontFamily -> "Alte Schwabacher"]}], "frC" -> RowBox[{
+     StyleBox["C", FontFamily -> "Alte Schwabacher"]}], "frD" -> RowBox[{
+     StyleBox["D", FontFamily -> "Alte Schwabacher"]}], "frE" -> RowBox[{
+     StyleBox["E", FontFamily -> "Alte Schwabacher"]}], "frF" -> RowBox[{
+     StyleBox["F", FontFamily -> "Alte Schwabacher"]}], "frG" -> RowBox[{
+     StyleBox["G", FontFamily -> "Alte Schwabacher"]}], "frH" -> RowBox[{
+     StyleBox["H", FontFamily -> "Alte Schwabacher"]}], "frI" -> RowBox[{
+     StyleBox["I", FontFamily -> "Alte Schwabacher"]}], "frJ" -> RowBox[{
+     StyleBox["J", FontFamily -> "Alte Schwabacher"]}], "frK" -> RowBox[{
+     StyleBox["K", FontFamily -> "Alte Schwabacher"]}], "frL" -> RowBox[{
+     StyleBox["L", FontFamily -> "Alte Schwabacher"]}], "frM" -> RowBox[{
+     StyleBox["M", FontFamily -> "Alte Schwabacher"]}], "frN" -> RowBox[{
+     StyleBox["N", FontFamily -> "Alte Schwabacher"]}], "frO" -> RowBox[{
+     StyleBox["O", FontFamily -> "Alte Schwabacher"]}], "frP" -> RowBox[{
+     StyleBox["P", FontFamily -> "Alte Schwabacher"]}], "frQ" -> RowBox[{
+     StyleBox["Q", FontFamily -> "Alte Schwabacher"]}], "frR" -> RowBox[{
+     StyleBox["R", FontFamily -> "Alte Schwabacher"]}], "frS" -> RowBox[{
+     StyleBox["S", FontFamily -> "Alte Schwabacher"]}], "frT" -> RowBox[{
+     StyleBox["T", FontFamily -> "Alte Schwabacher"]}], "frU" -> RowBox[{
+     StyleBox["U", FontFamily -> "Alte Schwabacher"]}], "frV" -> RowBox[{
+     StyleBox["V", FontFamily -> "Alte Schwabacher"]}], "frW" -> RowBox[{
+     StyleBox["W", FontFamily -> "Alte Schwabacher"]}], "frX" -> RowBox[{
+     StyleBox["X", FontFamily -> "Alte Schwabacher"]}], "frY" -> RowBox[{
+     StyleBox["Y", FontFamily -> "Alte Schwabacher"]}], "frZ" -> RowBox[{
+     StyleBox["Z", FontFamily -> "Alte Schwabacher"]}], "fra" -> RowBox[{
+     StyleBox["a", FontFamily -> "Alte Schwabacher"]}], "frb" -> RowBox[{
+     StyleBox["b", FontFamily -> "Alte Schwabacher"]}], "frc" -> RowBox[{
+     StyleBox["c", FontFamily -> "Alte Schwabacher"]}], "frd" -> RowBox[{
+     StyleBox["d", FontFamily -> "Alte Schwabacher"]}], "fre" -> RowBox[{
+     StyleBox["e", FontFamily -> "Alte Schwabacher"]}], "frf" -> RowBox[{
+     StyleBox["f", FontFamily -> "Alte Schwabacher"]}], "frg" -> RowBox[{
+     StyleBox["g", FontFamily -> "Alte Schwabacher"]}], "frh" -> RowBox[{
+     StyleBox["h", FontFamily -> "Alte Schwabacher"]}], "fri" -> RowBox[{
+     StyleBox["i", FontFamily -> "Alte Schwabacher"]}], "frj" -> RowBox[{
+     StyleBox["j", FontFamily -> "Alte Schwabacher"]}], "frk" -> RowBox[{
+     StyleBox["k", FontFamily -> "Alte Schwabacher"]}], "frl" -> RowBox[{
+     StyleBox["l", FontFamily -> "Alte Schwabacher"]}], "frm" -> RowBox[{
+     StyleBox["m", FontFamily -> "Alte Schwabacher"]}], "frn" -> RowBox[{
+     StyleBox["n", FontFamily -> "Alte Schwabacher"]}], "fro" -> RowBox[{
+     StyleBox["o", FontFamily -> "Alte Schwabacher"]}], "frp" -> RowBox[{
+     StyleBox["p", FontFamily -> "Alte Schwabacher"]}], "frq" -> RowBox[{
+     StyleBox["q", FontFamily -> "Alte Schwabacher"]}], "frr" -> RowBox[{
+     StyleBox["r", FontFamily -> "Alte Schwabacher"]}], "frs" -> RowBox[{
+     StyleBox["s", FontFamily -> "Alte Schwabacher"]}], "frt" -> RowBox[{
+     StyleBox["t", FontFamily -> "Alte Schwabacher"]}], "fru" -> RowBox[{
+     StyleBox["u", FontFamily -> "Alte Schwabacher"]}], "frv" -> RowBox[{
+     StyleBox["v", FontFamily -> "Alte Schwabacher"]}], "frw" -> RowBox[{
+     StyleBox["w", FontFamily -> "Alte Schwabacher"]}], "frx" -> RowBox[{
+     StyleBox["x", FontFamily -> "Alte Schwabacher"]}], "fry" -> RowBox[{
+     StyleBox["y", FontFamily -> "Alte Schwabacher"]}], "frz" -> RowBox[{
+     StyleBox["z", FontFamily -> "Alte Schwabacher"]}], "drT" -> 
+  "\[DoubleRightTee]"},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 3370, 82, 386, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

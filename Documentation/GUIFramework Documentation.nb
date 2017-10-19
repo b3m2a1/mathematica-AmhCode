@@ -1,0 +1,589 @@
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[         0,          0]
+NotebookDataLength[     14636,        588]
+NotebookOptionsPosition[      9125,        396]
+NotebookOutlinePosition[     10005,        422]
+CellTagsIndexPosition[      9962,        419]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["GUIFramework Documentation", "Chapter",
+ CellChangeTimes->{{3.670000844966814*^9, 3.670000849581444*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Classes", "Section",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.667766647497061*^9, {3.6700008664953623`*^9, 3.6700008824288893`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["GUIBaseWidgetClass", "Subsection",
+ CellChangeTimes->{{3.6700009187040653`*^9, 3.670000937630685*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Bound method: Init", "Subsubsection",
+ CellChangeTimes->{3.6700009436903477`*^9}],
+
+Cell["", "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Bound method: UpdateSettings", "Subsubsection",
+ CellChangeTimes->{3.6700009534021587`*^9}],
+
+Cell["", "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Bound method: Bind", "Subsubsection",
+ CellChangeTimes->{3.670000956961934*^9}],
+
+Cell["", "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Bound method: Unbind", "Subsubsection",
+ CellChangeTimes->{3.6700009620098124`*^9}],
+
+Cell["", "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Bound method: Display", "Subsubsection",
+ CellChangeTimes->{3.670000967017535*^9}],
+
+Cell["", "Text"]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["GUIRootClass", "Subsection",
+ CellChangeTimes->{3.6700010016807013`*^9}],
+
+Cell[CellGroupData[{
+
+Cell["Extends GUIBaseWidgetClass", "Subsubsection",
+ CellChangeTimes->{3.670001017872349*^9}],
+
+Cell["", "Text",
+ CellChangeTimes->{{3.6700025769670963`*^9, 3.6700025774299793`*^9}}]
+}, Open  ]],
+
+Cell["Bound method: Init", "Subsubsection",
+ CellChangeTimes->{3.670001023159981*^9}],
+
+Cell["Bound method: NameToWidget", "Subsubsection",
+ CellChangeTimes->{3.670001031479813*^9}],
+
+Cell["Bound method: Display", "Subsubsection",
+ CellChangeTimes->{3.670001036007365*^9}],
+
+Cell["Bound property: Children", "Subsubsection",
+ CellChangeTimes->{3.670001040287545*^9}],
+
+Cell[CellGroupData[{
+
+Cell["Bound method: Destroy", "Subsubsection",
+ CellChangeTimes->{3.67000104757518*^9}],
+
+Cell["\<\
+If displaying as a new window, destroys that and sets visible to false. Sets \
+the UpdateFlag to Null;\
+\>", "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Bound property: Expression", "Subsubsection",
+ CellChangeTimes->{3.670001052719192*^9}],
+
+Cell["\<\
+Uses its geometry manager to calcuate the appropriate layout and then merges \
+all child widgets into a single synchronized module. Done for potential \
+state-sharing.\
+\>", "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Bound method: Update", "Subsubsection",
+ CellChangeTimes->{3.670001056542482*^9}],
+
+Cell["\<\
+Saves current variable values, has the GeometryManager update the current \
+layout, displays that, and then copies variable values back.\
+\>", "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Bound method: UpdateSettings", "Subsubsection",
+ CellChangeTimes->{3.670001063190978*^9}],
+
+Cell["\<\
+Calls the base widget UpdateSettings process and then applies further styling \
+to any displayed window.\
+\>", "Text"]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["GUIGeometryManagerClass", "Subsection",
+ CellChangeTimes->{3.670001075439951*^9}],
+
+Cell[CellGroupData[{
+
+Cell["Class method: ManageGeometry", "Subsubsection",
+ CellChangeTimes->{3.670001094110216*^9}],
+
+Cell["", "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Class method: Template", "Subsubsection",
+ CellChangeTimes->{{3.670001097254181*^9, 3.6700011024457893`*^9}}],
+
+Cell["", "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Class method: HeightWidthGrid", "Subsubsection",
+ CellChangeTimes->{{3.670001107115842*^9, 3.670001110797615*^9}}],
+
+Cell["", "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Class method: CalculateSize", "Subsubsection",
+ CellChangeTimes->{3.6700011137975616`*^9}],
+
+Cell["", "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Static method: Pack", "Subsubsection",
+ CellChangeTimes->{3.670001117805444*^9}],
+
+Cell["", "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Static method: Grid", "Subsubsection",
+ CellChangeTimes->{3.670001121317389*^9}],
+
+Cell["", "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Static method: Place", "Subsubsection",
+ CellChangeTimes->{3.670001124628984*^9}],
+
+Cell["", "Text"]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["GUIWidgetClass", "Subsection",
+ CellChangeTimes->{3.6700011776048603`*^9}],
+
+Cell["Extends GUIBaseWidgetClass", "Subsubsection",
+ CellChangeTimes->{3.6700011846273937`*^9}],
+
+Cell[CellGroupData[{
+
+Cell["Bound method: Init", "Subsubsection",
+ CellChangeTimes->{3.670001225186823*^9}],
+
+Cell["\<\
+Initializes the Widget such that it has a parent widget and an expression \
+which gets wrapped in a SynchronizedModule if it is not already in one
+Its properties come from calling Init on GUIBaseWidgetClass\
+\>", "Text",
+ CellChangeTimes->{3.670002449146579*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Bound property: Representation", "Subsubsection",
+ CellChangeTimes->{3.670001228826344*^9}],
+
+Cell["\<\
+Generates a dynamically updating form of Expression. Not all that useful for \
+real GUI work.\
+\>", "Text",
+ CellChangeTimes->{3.670002459386058*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Bound property: Expression", "Subsubsection",
+ CellChangeTimes->{3.6700012317622967`*^9}],
+
+Cell["\<\
+This is the real visual gui object seen. For container widgets, this will \
+generally be null.\
+\>", "Text",
+ CellChangeTimes->{3.6700024681459303`*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Bound method: NameToWidget", "Subsubsection",
+ CellChangeTimes->{3.670001234626197*^9}],
+
+Cell["\<\
+Takes a widget name/id key and gets the widget object from the root object\
+\[CloseCurlyQuote]s stored widgets\
+\>", "Text",
+ CellChangeTimes->{3.6700024765377703`*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Bound method: SetOptions", "Subsubsection",
+ CellChangeTimes->{3.670001237426029*^9}],
+
+Cell["\<\
+Sets widget options and then calls update on the root object which will, at \
+some point, respond as a queued process rather than immediately, decreasing \
+the danger of calling too often.\
+\>", "Text",
+ CellChangeTimes->{{3.670002515910729*^9, 3.6700025299986057`*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Bound method: Pack", "Subsubsection",
+ CellChangeTimes->{3.6700012403142967`*^9}],
+
+Cell["", "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Bound method: PackForget", "Subsubsection",
+ CellChangeTimes->{3.670001244369708*^9}],
+
+Cell["", "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Bound method: Grid", "Subsubsection",
+ CellChangeTimes->{3.670001247089828*^9}],
+
+Cell["", "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Bound method: GridForget", "Subsubsection",
+ CellChangeTimes->{3.6700012502576942`*^9}],
+
+Cell["", "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Bound method: Place", "Subsubsection",
+ CellChangeTimes->{3.670001253329483*^9}],
+
+Cell["", "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Bound method: PlaceForget", "Subsubsection",
+ CellChangeTimes->{3.670001256297371*^9}],
+
+Cell["", "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Bound property: Children", "Subsubsection",
+ CellChangeTimes->{3.670001259857437*^9}],
+
+Cell["", "Text"]
+}, Closed]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Constructor Functions", "Section",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.667766647497061*^9, {3.670001269382196*^9, 3.670001279437768*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["GUIRoot", "Subsubsection",
+ CellChangeTimes->{
+  3.670001309112167*^9, {3.67000138944145*^9, 3.670001391447711*^9}}],
+
+Cell["Makes a GUI root object", "Text",
+ CellChangeTimes->{3.67000132508661*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["GUIWidget", "Subsubsection",
+ CellChangeTimes->{
+  3.6700013447592497`*^9, {3.670001393015677*^9, 3.6700013959355173`*^9}}],
+
+Cell["\<\
+Makes a general GUIWidget object from the variables and expression given. If \
+no root is provided, it makes one.\
+\>", "Text",
+ CellChangeTimes->{3.6700013503111773`*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["GUIFrame", "Subsubsection",
+ CellChangeTimes->{{3.670001977727092*^9, 3.670001979141605*^9}}],
+
+Cell["Makes a GUI frame for packing in other widgets", "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["GUILabel", "Subsubsection",
+ CellChangeTimes->{{3.6700019828293123`*^9, 3.670001988548749*^9}}],
+
+Cell["\<\
+Makes an updating label which uses the widget settings value Label to update\
+\>", "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["GUIButton", "Subsubsection",
+ CellChangeTimes->{{3.670001990677162*^9, 3.6700019924849358`*^9}}],
+
+Cell["\<\
+Makes a GUI button that uses the label specified by Label and the function \
+specified by ButtonFunction\
+\>", "Text"]
+}, Closed]]
+}, Closed]]
+}, Open  ]]
+},
+WindowSize->{808, 715},
+WindowMargins->{{32, Automatic}, {Automatic, 69}},
+TaggingRules->{ScrollPosition -> {0., 48.}, "$testsRun" -> False},
+FrontEndVersion->"10.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 10, \
+2015)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[StyleDefinitions -> FrontEnd`FileName[{
+        ParentDirectory[
+         ParentDirectory[]], "Stylesheets"}, "Documentation Stylesheet.nb", 
+       CharacterEncoding -> "UTF-8"]]]}, WindowSize -> {808, 755}, 
+  WindowMargins -> {{36, Automatic}, {16, Automatic}}, Visible -> False, 
+  FrontEndVersion -> 
+  "10.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 10, 2015)", 
+  StyleDefinitions -> "PrivateStylesheetFormatting.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[422, 15, 111, 1, 65, "Chapter"],
+Cell[CellGroupData[{
+Cell[558, 20, 171, 4, 65, "Section"],
+Cell[CellGroupData[{
+Cell[754, 28, 108, 1, 48, "Subsection"],
+Cell[CellGroupData[{
+Cell[887, 33, 87, 1, 52, "Subsubsection"],
+Cell[977, 36, 16, 0, 48, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1030, 41, 97, 1, 44, "Subsubsection"],
+Cell[1130, 44, 16, 0, 48, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1183, 49, 85, 1, 44, "Subsubsection"],
+Cell[1271, 52, 16, 0, 48, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1324, 57, 89, 1, 44, "Subsubsection"],
+Cell[1416, 60, 16, 0, 48, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1469, 65, 88, 1, 44, "Subsubsection"],
+Cell[1560, 68, 16, 0, 48, "Text"]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1625, 74, 78, 1, 48, "Subsection"],
+Cell[CellGroupData[{
+Cell[1728, 79, 93, 1, 52, "Subsubsection"],
+Cell[1824, 82, 86, 1, 48, "Text"]
+}, Open  ]],
+Cell[1925, 86, 85, 1, 52, "Subsubsection"],
+Cell[2013, 89, 93, 1, 44, "Subsubsection"],
+Cell[2109, 92, 88, 1, 44, "Subsubsection"],
+Cell[2200, 95, 91, 1, 44, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[2316, 100, 87, 1, 44, "Subsubsection"],
+Cell[2406, 103, 126, 3, 48, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2569, 111, 93, 1, 44, "Subsubsection"],
+Cell[2665, 114, 191, 4, 67, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2893, 123, 87, 1, 44, "Subsubsection"],
+Cell[2983, 126, 160, 3, 67, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[3180, 134, 95, 1, 44, "Subsubsection"],
+Cell[3278, 137, 128, 3, 48, "Text"]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3455, 146, 87, 1, 48, "Subsection"],
+Cell[CellGroupData[{
+Cell[3567, 151, 95, 1, 52, "Subsubsection"],
+Cell[3665, 154, 16, 0, 48, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[3718, 159, 115, 1, 44, "Subsubsection"],
+Cell[3836, 162, 16, 0, 48, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[3889, 167, 120, 1, 44, "Subsubsection"],
+Cell[4012, 170, 16, 0, 48, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[4065, 175, 96, 1, 44, "Subsubsection"],
+Cell[4164, 178, 16, 0, 48, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[4217, 183, 86, 1, 44, "Subsubsection"],
+Cell[4306, 186, 16, 0, 48, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[4359, 191, 86, 1, 44, "Subsubsection"],
+Cell[4448, 194, 16, 0, 48, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[4501, 199, 87, 1, 44, "Subsubsection"],
+Cell[4591, 202, 16, 0, 48, "Text"]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[4656, 208, 80, 1, 48, "Subsection"],
+Cell[4739, 211, 95, 1, 52, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[4859, 216, 85, 1, 44, "Subsubsection"],
+Cell[4947, 219, 272, 5, 86, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[5256, 229, 97, 1, 44, "Subsubsection"],
+Cell[5356, 232, 159, 4, 48, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[5552, 241, 95, 1, 44, "Subsubsection"],
+Cell[5650, 244, 162, 4, 48, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[5849, 253, 93, 1, 44, "Subsubsection"],
+Cell[5945, 256, 178, 4, 48, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[6160, 265, 91, 1, 44, "Subsubsection"],
+Cell[6254, 268, 280, 5, 67, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[6571, 278, 87, 1, 44, "Subsubsection"],
+Cell[6661, 281, 16, 0, 48, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[6714, 286, 91, 1, 44, "Subsubsection"],
+Cell[6808, 289, 16, 0, 48, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[6861, 294, 85, 1, 44, "Subsubsection"],
+Cell[6949, 297, 16, 0, 48, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[7002, 302, 93, 1, 44, "Subsubsection"],
+Cell[7098, 305, 16, 0, 48, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[7151, 310, 86, 1, 44, "Subsubsection"],
+Cell[7240, 313, 16, 0, 48, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[7293, 318, 92, 1, 44, "Subsubsection"],
+Cell[7388, 321, 16, 0, 48, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[7441, 326, 91, 1, 44, "Subsubsection"],
+Cell[7535, 329, 16, 0, 48, "Text"]
+}, Closed]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7612, 336, 181, 4, 65, "Section"],
+Cell[CellGroupData[{
+Cell[7818, 344, 122, 2, 52, "Subsubsection"],
+Cell[7943, 348, 80, 1, 48, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[8060, 354, 129, 2, 44, "Subsubsection"],
+Cell[8192, 358, 181, 4, 48, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[8410, 367, 99, 1, 44, "Subsubsection"],
+Cell[8512, 370, 62, 0, 48, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[8611, 375, 101, 1, 44, "Subsubsection"],
+Cell[8715, 378, 100, 2, 48, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[8852, 385, 102, 1, 44, "Subsubsection"],
+Cell[8957, 388, 128, 3, 48, "Text"]
+}, Closed]]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+

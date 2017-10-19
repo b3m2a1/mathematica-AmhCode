@@ -1,0 +1,374 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10996,        365]
+NotebookOptionsPosition[      8282,        292]
+NotebookOutlinePosition[      9002,        318]
+CellTagsIndexPosition[      8959,        315]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[StyleData[StyleDefinitions -> "Default.nb"]],
+
+Cell[StyleData[All],
+ PageWidth->PaperWidth,
+ FontFamily->"Times New Roman"],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["Notebook"],
+ PrintingOptions->{"EmbedExternalFonts"->True,
+ "EmbedStandardPostScriptFonts"->True,
+ "FacingPages"->True,
+ "FirstPageFace"->Right,
+ "FirstPageFooter"->True,
+ "FirstPageHeader"->False,
+ "GraphicsPrintingFormat"->"Automatic",
+ "IncludePostScriptResourceDirectives"->True,
+ "IncludeSpecialFonts"->True,
+ "InnerOuterMargins"->{Automatic, Automatic},
+ "Magnification"->1.,
+ "OpacityRenderingMethod"->"RenderFeatures",
+ "PageFooterMargins"->{Automatic, Automatic},
+ "PageHeaderMargins"->{Automatic, Automatic},
+ "PageSize"->{Automatic, Automatic},
+ "PaperOrientation"->"Portrait",
+ "PaperSize"->{Automatic, Automatic},
+ "PostScriptOutputFile"->Automatic,
+ "PrintCellBrackets"->False,
+ "PrintMultipleHorizontalPages"->False,
+ "PrintRegistrationMarks"->False,
+ "PrintSelectionHighlighting"->False,
+ "PrintingMargins"->{{54, 54}, {72, 72}},
+ "RasterizationResolution"->"Automatic",
+ "RestPagesFooter"->True,
+ "RestPagesHeader"->True,
+ "UnixShellPrintingCommand"->Automatic,
+ "UsePostScriptOutputFile"->False,
+ "UseUnixShellPrintingCommand"->False,
+ "VertexColorRenderingMethod"->"RenderFeatures"},
+ DefaultNewCellStyle->"Chapter"],
+
+Cell[BoxData[
+ RowBox[{"SetOptions", "[", 
+  RowBox[{
+   RowBox[{"PreviousCell", "[", "]"}], ",", 
+   RowBox[{"AbsoluteOptions", "[", 
+    RowBox[{
+     RowBox[{"EvaluationNotebook", "[", "]"}], ",", "PrintingOptions"}], 
+    "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6710389131607437`*^9, 3.671038937962975*^9}}]
+}, Open  ]],
+
+Cell[StyleData["Title"],
+ DefaultNewCellStyle->"Chapter",
+ FontSize->18,
+ FontColor->GrayLevel[0]],
+
+Cell[StyleData["Subchapter"],
+ CellDingbat->"\[FilledSquare]",
+ DefaultNewCellStyle->"Section",
+ FontSize->14,
+ FontColor->GrayLevel[0]],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["Chapter"],
+ CellFrame->{{0, 0}, {0.5, 0.5}},
+ CellFrameColor->GrayLevel[0.7],
+ DefaultNewCellStyle->"Text",
+ FontSize->16,
+ FontColor->GrayLevel[0]],
+
+Cell[StyleData["Chapter", "Printout"],
+ CellFrame->{{0, 0}, {0.5, 0.5}},
+ CellFrameColor->GrayLevel[0.7],
+ DefaultNewCellStyle->"Text",
+ FontColor->GrayLevel[0]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["Section"],
+ CellFrame->{{0, 0}, {0.5, 0}},
+ CellMargins->{{27, Inherited}, {4, 1}},
+ FontSize->16,
+ FontColor->GrayLevel[0]],
+
+Cell[StyleData["Section", "Printout"],
+ CellFrame->{{0, 0}, {0.5, 0}},
+ CellMargins->{{27, Inherited}, {4, 1}},
+ FontColor->GrayLevel[0]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["Subsection"],
+ CellFrame->{{0, 0}, {0.5, 0}},
+ CellMargins->{{50.34765625, 200}, {4., 4.}},
+ GroupOpenerColor->GrayLevel[0.49999237048905165`],
+ DefaultNewCellStyle->"Text",
+ FontSize->14,
+ FontColor->GrayLevel[0]],
+
+Cell[StyleData["Subsection", "Printout"],
+ CellFrame->{{0, 0}, {0.5, 0}},
+ CellMargins->{{50.34765625, 200}, {4., 4.}},
+ DefaultNewCellStyle->"Text",
+ FontSize->14,
+ FontColor->GrayLevel[0]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["Subsubsection"],
+ CellFrame->{{0, 0}, {0, 0}},
+ CellMargins->{{66, Inherited}, {8, 4}},
+ CellFrameMargins->2,
+ CellFrameColor->GrayLevel[0.5],
+ DefaultNewCellStyle->"Text",
+ FontSize->14,
+ FontSlant->"Italic",
+ FontColor->GrayLevel[0]],
+
+Cell[StyleData["Subsubsection", "Printout"],
+ CellFrame->{{0, 0}, {0, 0}},
+ CellMargins->{{66, Inherited}, {8, 4}},
+ CellFrameMargins->2,
+ CellFrameColor->GrayLevel[0.5],
+ DefaultNewCellStyle->"Text",
+ FontSize->14,
+ FontSlant->"Italic",
+ FontColor->GrayLevel[0]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["Text"],
+ CellMargins->{{66, 10}, {0, 4}},
+ DefaultNewCellStyle->"Text",
+ FontSize->12],
+
+Cell[StyleData["Text", "Printout"],
+ DefaultNewCellStyle->"Text",
+ FontSize->12]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["ColumnCell", StyleDefinitions -> StyleData["Text"]],
+ CellEventActions->{"KeyDown" :> With[{text = Part[
+        NotebookRead[
+         EvaluationCell[]], 1]}, 
+     If[Length[text] === 0, 
+      NotebookWrite[
+       EvaluationCell[], 
+       Cell[
+        TextData[
+         Cell[
+          BoxData[
+           GridBox[{{
+              Cell["\[Placeholder]"], 
+              Cell["\[Placeholder]"]}}, AutoDelete -> False, 
+            GridDefaultElement -> Cell["\[Placeholder]"], 
+            GridBoxAlignment -> {"Columns" -> {Left, Right}}, 
+            GridBoxItemSize -> {"Columns" -> {{
+                 Scaled[0.5]}}}]], "Text"]], "ColumnCell", 
+        CellEventActions -> {}]]]]},
+ MenuSortingValue->2500],
+
+Cell[StyleData["ColumnCell", "Printout", StyleDefinitions -> StyleData["Text"]
+ ],
+ CellEventActions->{"KeyDown" :> With[{text = Part[
+        NotebookRead[
+         EvaluationCell[]], 1]}, 
+     If[Length[text] === 0, 
+      NotebookWrite[
+       EvaluationCell[], 
+       Cell[
+        TextData[
+         Cell[
+          BoxData[
+           GridBox[{{
+              Cell["\[Placeholder]"], 
+              Cell["\[Placeholder]"]}}, AutoDelete -> False, 
+            GridDefaultElement -> Cell["\[Placeholder]"], 
+            GridBoxAlignment -> {"Columns" -> {Left, Right}}, 
+            GridBoxItemSize -> {"Columns" -> {{
+                 Scaled[0.5]}}}]], "Text"]], "ColumnCell", 
+        CellEventActions -> {}]]]]},
+ MenuSortingValue->2500],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.674945966282711*^9, 3.674945968371098*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["Item"],
+ CellDingbat->"\[CenterDot]",
+ CellMargins->{{76, 10}, {3, 0}},
+ FontSize->12],
+
+Cell[StyleData["Item", "Printout"],
+ CellDingbat->"\[CenterDot]",
+ CellMargins->{{76, 10}, {3, 0}},
+ FontSize->12]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["Subitem"],
+ CellDingbat->"-",
+ CellMargins->{{105, 12}, {2, 0}},
+ FontSize->12],
+
+Cell[StyleData["Subitem", "Printout"],
+ CellDingbat->"-",
+ CellMargins->{{105, 12}, {2, 0}},
+ FontSize->12]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["LineItem", StyleDefinitions -> StyleData["Subsection"]],
+ CellFrame->{{0, 0}, {0.5, 0.5}},
+ CellEventActions->{"KeyDown" :> With[{text = Part[
+        NotebookRead[
+         EvaluationCell[]], 1]}, 
+     If[Length[text] === 0, 
+      NotebookWrite[
+       EvaluationCell[], 
+       Cell[
+        TextData[
+         Cell[
+          BoxData[
+           GridBox[{{
+              Cell["\[Placeholder]", "Subsection", CellFrame -> None], 
+              Cell["\[Placeholder]", "Text", FontSlant -> "Italic"]}}, 
+            AutoDelete -> False, GridDefaultElement -> Cell["\[Placeholder]"],
+             GridBoxAlignment -> {"Columns" -> {Left, Right}}, 
+            GridBoxItemSize -> {"Columns" -> {{
+                 Scaled[0.5]}}}]], "Text"]], "LineItem", 
+        CellEventActions -> {}]]]]},
+ MenuSortingValue->1500],
+
+Cell[StyleData["LineItem", "Printout", StyleDefinitions -> StyleData[
+ "Subsection", "Printout"]],
+ CellFrame->{{0, 0}, {1, 1}},
+ CellEventActions->{"KeyDown" :> With[{text = Part[
+        NotebookRead[
+         EvaluationCell[]], 1]}, 
+     If[Length[text] === 0, 
+      NotebookWrite[
+       EvaluationCell[], 
+       Cell[
+        TextData[
+         Cell[
+          BoxData[
+           GridBox[{{
+              Cell["\[Placeholder]", "Subsection", CellFrame -> None], 
+              Cell["\[Placeholder]", "Text", FontSlant -> "Italic"]}}, 
+            AutoDelete -> False, GridDefaultElement -> Cell["\[Placeholder]"],
+             GridBoxAlignment -> {"Columns" -> {Left, Right}}, 
+            GridBoxItemSize -> {"Columns" -> {{
+                 Scaled[0.5]}}}]], "Text"]], "LineItem", 
+        CellEventActions -> {}]]]]},
+ MenuSortingValue->1500]
+}, Open  ]],
+
+Cell["", "Text",
+ CellChangeTimes->{{3.6749459044828653`*^9, 3.674945915813178*^9}}]
+},
+WindowToolbars->{"RulerBar", "EditBar"},
+WindowSize->{808, 755},
+WindowMargins->{{45, Automatic}, {Automatic, 0}},
+PrintingStartingPageNumber->1,
+PageHeaders->{{None, None, None}, {None, None, None}},
+PageFooters->{{None, None, None}, {None, None, None}},
+PageHeaderLines->{False, False},
+PageFooterLines->{False, False},
+PrintingOptions->{"FacingPages"->True,
+"FirstPageFace"->Right,
+"FirstPageFooter"->True,
+"FirstPageHeader"->False},
+FrontEndVersion->"10.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 10, \
+2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 49, 0, 36, 49, 0, "StyleData", "StyleDefinitions", ""],
+Cell[610, 22, 76, 2, 38, 20, 0, "StyleData", "All", "All"],
+Cell[CellGroupData[{
+Cell[711, 28, 1151, 31, 38, 27, 0, "StyleData", "Notebook", "All"],
+Cell[1865, 61, 319, 8, 28, "Input"]
+}, Open  ]],
+Cell[2199, 72, 98, 3, 76, 24, 0, "StyleData", "Title", "All"],
+Cell[2300, 77, 136, 4, 60, 29, 0, "StyleData", "Subchapter", "All"],
+Cell[CellGroupData[{
+Cell[2461, 85, 164, 5, 65, 26, 0, "StyleData", "Chapter", "All"],
+Cell[2628, 92, 161, 4, 72, 38, 0, "StyleData", "Chapter", "Printout"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2826, 101, 140, 4, 43, 26, 0, "StyleData", "Section", "All"],
+Cell[2969, 107, 137, 3, 43, 38, 0, "StyleData", "Section", "Printout"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3143, 115, 230, 6, 48, 29, 0, "StyleData", "Subsection", "All"],
+Cell[3376, 123, 190, 5, 48, 41, 0, "StyleData", "Subsection", "Printout"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3603, 133, 251, 8, 44, 32, 0, "StyleData", "Subsubsection", "All"],
+Cell[3857, 143, 263, 8, 44, 44, 0, "StyleData", "Subsubsection", "Printout"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4157, 156, 102, 3, 34, 23, 0, "StyleData", "Text", "All"],
+Cell[4262, 161, 80, 2, 38, 35, 0, "StyleData", "Text", "Printout"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4379, 168, 732, 19, 34, 68, 0, "StyleData", "ColumnCell", "All",
+ MenuSortingValue->2500],
+Cell[5114, 189, 746, 20, 34, 82, 1, "StyleData", "ColumnCell", "Printout",
+ MenuSortingValue->2500],
+Cell[5863, 211, 92, 1, 28, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5992, 217, 102, 3, 33, 23, 0, "StyleData", "Item", "All"],
+Cell[6097, 222, 114, 3, 33, 35, 0, "StyleData", "Item", "Printout"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6248, 230, 95, 3, 32, 26, 0, "StyleData", "Subitem", "All"],
+Cell[6346, 235, 107, 3, 32, 38, 0, "StyleData", "Subitem", "Printout"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6490, 243, 832, 20, 57, 72, 0, "StyleData", "LineItem", "All",
+ MenuSortingValue->1500],
+Cell[7325, 265, 854, 21, 58, 98, 1, "StyleData", "LineItem", "Printout",
+ MenuSortingValue->1500]
+}, Open  ]],
+Cell[8194, 289, 84, 1, 30, "Text"]
+}
+]
+*)
+
+(* End of internal cache information *)

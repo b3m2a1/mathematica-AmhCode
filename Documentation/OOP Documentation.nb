@@ -1,0 +1,1134 @@
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[         0,          0]
+NotebookDataLength[     46616,       1133]
+NotebookOptionsPosition[     42647,        995]
+NotebookOutlinePosition[     43092,       1012]
+CellTagsIndexPosition[     43049,       1009]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Initialization Code", "Section",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.667766647497061*^9, {3.6677667951610727`*^9, 3.667766802871591*^9}, {
+   3.667768776531026*^9, 3.667768777483418*^9}, {3.667769192597437*^9, 
+   3.667769193662045*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Get", "@", 
+   RowBox[{"FileNameJoin", "@", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<OOP.m\>\""}], 
+     "}"}]}]}], ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.667766803842949*^9, 3.667766823929606*^9}, {
+  3.66778272441191*^9, 3.667782753945856*^9}, {3.668704571389266*^9, 
+  3.668704592731381*^9}, {3.668974739957547*^9, 3.668974740980019*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Documentation", "Section",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.667766647497061*^9, {3.668704515850252*^9, 3.668704518600988*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["MathematicaClass Head", "Subsection",
+ CellChangeTimes->{{3.66870463349911*^9, 3.668704636924182*^9}}],
+
+Cell["\<\
+This specifies that an object is a mathematica class. All symbols with \
+mathematica class properties will have this head. All operator overloading is \
+done with this head. The overloading is done as follows:\
+\>", "Text",
+ CellChangeTimes->{{3.668704638769702*^9, 3.6687047097358017`*^9}, {
+  3.66870490722646*^9, 3.668704909467595*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["MathematicaClassConstructor", "Subsection",
+ CellChangeTimes->{{3.668973390242051*^9, 3.668973402816339*^9}}],
+
+Cell["The complex function at the heart of class construction.", "Text",
+ CellChangeTimes->{{3.66897539310987*^9, 3.668975408052153*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Simplified Class Constructor", "Subsection",
+ CellChangeTimes->{{3.668973578856752*^9, 3.6689735845757723`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["BeginClass", "Subsubsection",
+ CellChangeTimes->{{3.6689735877189093`*^9, 3.668973589919464*^9}}],
+
+Cell["\<\
+Adds data to the class buffer that specifies the creation of a new class.
+variable=BeginClass[\[OpenCurlyDoubleQuote]classname\[CloseCurlyDoubleQuote]] \
+turns into \
+BeginClass[\[OpenCurlyDoubleQuote]classname\[CloseCurlyDoubleQuote],variable];\
+\>", "Text",
+ CellChangeTimes->{{3.6689735933032084`*^9, 3.66897367413337*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["EndClass", "Subsubsection",
+ CellChangeTimes->{{3.668974802818617*^9, 3.668974804227702*^9}}],
+
+Cell["\<\
+Takes the data in the buffer and finds the first class is can and turns that \
+into a class. If the buffer has is {\[OpenCurlyDoubleQuote]Class\
+\[CloseCurlyDoubleQuote], \[OpenCurlyDoubleQuote]clsname\
+\[CloseCurlyDoubleQuote], variable} it assigns the class to a variable\
+\>", "Text",
+ CellChangeTimes->{{3.668974808330275*^9, 3.668974850886531*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["ConstructClass", "Subsubsection",
+ CellChangeTimes->{{3.668973410175349*^9, 3.668973416671605*^9}}],
+
+Cell["\<\
+Builds a class using the values returned from the helper functions \
+BoundMethod, StaticMethod, etc. If one of those is called within construct \
+class, it doesn\[CloseCurlyQuote]t append its data to the buffer.\
+\>", "Text",
+ CellChangeTimes->{{3.668973423393229*^9, 3.66897345209251*^9}, {
+  3.6689749406868267`*^9, 3.668974975262989*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["BoundMethod", "Subsubsection",
+ CellChangeTimes->{{3.6689750338156424`*^9, 3.668975035656336*^9}}],
+
+Cell["\<\
+Represents a bound method. Used as BoundMethod[name,variables___,function].
+BoundMethod[name,variables]:=function turns into \
+BoundMethod[name,variables___,function].
+Appends data to the class buffer by default.\
+\>", "Text",
+ CellChangeTimes->{{3.668975037671817*^9, 3.668975094806841*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["StaticMethod", "Subsubsection",
+ CellChangeTimes->{{3.6689750338156424`*^9, 3.668975035656336*^9}, {
+  3.6689751011603947`*^9, 3.668975101966434*^9}}],
+
+Cell["\<\
+Represents a static method. Usage is the same as BoundMethod.\
+\>", "Text",
+ CellChangeTimes->{{3.668975037671817*^9, 3.6689751255456753`*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["ClassMethod", "Subsubsection",
+ CellChangeTimes->{{3.668975132524332*^9, 3.668975133933667*^9}}],
+
+Cell["\<\
+Represents a class method. Usage like BoundMethod and StaticMethod\
+\>", "Text",
+ CellChangeTimes->{{3.668975135052494*^9, 3.6689751464849567`*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["BoundProperty", "Subsubsection",
+ CellChangeTimes->{{3.668975153539844*^9, 3.668975155556666*^9}}],
+
+Cell["Represents a bound property. Usage like BoundMethod, etc.", "Text",
+ CellChangeTimes->{{3.6689751572836437`*^9, 3.668975172956069*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["InitializationFunction", "Subsubsection",
+ CellChangeTimes->{{3.668975175539208*^9, 3.668975179091588*^9}}],
+
+Cell["\<\
+Represents a python-style __init__ function. Usage like BoundMethod, etc.\
+\>", "Text",
+ CellChangeTimes->{{3.668975180730957*^9, 3.6689751981955013`*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["NoAttributeFunction", "Subsubsection",
+ CellChangeTimes->{{3.66897520674756*^9, 3.668975210139051*^9}}],
+
+Cell["\<\
+Represents a python-style __getattr__ function. Usage like BoundMethod, etc.\
+\>", "Text",
+ CellChangeTimes->{{3.6689752183643417`*^9, 3.668975240394167*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["ClassField", "Subsubsection",
+ CellChangeTimes->{{3.668975313298559*^9, 3.6689753147030687`*^9}}],
+
+Cell["\<\
+Represents a class field. Used as ClassField[name,value].
+ClassField[name]=value routes to ClassField[name,value]\
+\>", "Text",
+ CellChangeTimes->{{3.668975316702135*^9, 3.668975346405094*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["ParentClasses", "Subsubsection",
+ CellChangeTimes->{{3.668975351524983*^9, 3.6689753535339937`*^9}}],
+
+Cell["\<\
+Used like ClassField except the parent classes should always be a list.\
+\>", "Text",
+ CellChangeTimes->{{3.668975356596697*^9, 3.668975384820777*^9}}]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Convenience Functions", "Subsection",
+ CellChangeTimes->{{3.668977615561944*^9, 3.66897762037869*^9}}],
+
+Cell["GetAttribute", "Subsubsection",
+ CellChangeTimes->{{3.668977622550922*^9, 3.6689776249200163`*^9}}],
+
+Cell["SetAttribute", "Subsubsection",
+ CellChangeTimes->{{3.6689776261667624`*^9, 3.6689776289278507`*^9}}],
+
+Cell["ClassQ", "Subsubsection",
+ CellChangeTimes->{{3.668977631446615*^9, 3.668977632263584*^9}}],
+
+Cell["IsInstance", "Subsubsection",
+ CellChangeTimes->{{3.668977634526462*^9, 3.6689776362152853`*^9}}],
+
+Cell["ObjectString", "Subsubsection",
+ CellChangeTimes->{{3.668977647808626*^9, 3.668977649839347*^9}}]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Examples", "Section",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.667766647497061*^9, {3.66870452403379*^9, 3.668704525376886*^9}}],
+
+Cell["\<\
+You might wonder, what are classes good for anyway? Well, they serve two \
+primary roles:\
+\>", "Text",
+ CellFrame->{{0, 0}, {0, 0}},
+ CellChangeTimes->{{3.668976688076733*^9, 3.668976707746564*^9}, {
+  3.668976775547133*^9, 3.668976796070322*^9}},
+ FontFamily->"Helvetica",
+ FontSize->14,
+ Background->GrayLevel[1]],
+
+Cell[CellGroupData[{
+
+Cell["1. Data Ecapsulation", "Subsubsection",
+ CellChangeTimes->{{3.668976802150199*^9, 3.668976807703105*^9}}],
+
+Cell["\<\
+Using a class, we can patch together a disparate set of properties under one \
+head that can all communicate with eachother. A good example of this is the \
+ChemPrimitives package. Load the package with the following line of code.\
+\>", "Text",
+ CellFrame->{{0, 0}, {0, 0}},
+ CellChangeTimes->{{3.668976688076733*^9, 3.668976707746564*^9}, {
+  3.668976775547133*^9, 3.668976796070322*^9}, {3.668976827480466*^9, 
+  3.6689769440289917`*^9}},
+ FontFamily->"Helvetica",
+ FontSize->14,
+ Background->GrayLevel[1]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Get", "@", 
+   RowBox[{"FileNameJoin", "@", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], ",", 
+      "\"\<ChemPrimitives.m\>\""}], "}"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.668976918364566*^9, 3.668976931413734*^9}}],
+
+Cell["\<\
+As a powerful example of the kinds of general purpose data these can hold, \
+the ChemWrapper class has stored structural data (not literature data, just \
+stuff I put in there) on various molecules and complexes. \
+We\[CloseCurlyQuote]ll look at water.\
+\>", "Text",
+ CellFrame->{{0, 0}, {0, 0}},
+ CellChangeTimes->{{3.668976688076733*^9, 3.668976707746564*^9}, {
+  3.668976775547133*^9, 3.668976796070322*^9}, {3.668976827480466*^9, 
+  3.668977031113151*^9}},
+ FontFamily->"Helvetica",
+ FontSize->14,
+ Background->GrayLevel[1]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"water", "=", 
+   RowBox[{
+    RowBox[{"ChemWrapper", "::", "GetCompound"}], "[", "\"\<Water\>\"", 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"water", "::", "Draw"}], "[", 
+  RowBox[{
+   RowBox[{"ImageSize", "\[Rule]", "Small"}], ",", " ", 
+   RowBox[{"PlotStyle", "\[Rule]", "Tube"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6689770325936403`*^9, 3.6689770387847853`*^9}, {
+  3.6689771337611856`*^9, 3.668977186437305*^9}}],
+
+Cell[BoxData[
+ Graphics3DBox[GeometricTransformation3DBox[GeometricTransformation3DBox[{{
+      {RGBColor[1, 0, 0], 
+       {Specularity[
+         GrayLevel[1], 100], SphereBox[{-0.06713597785137554, 0., 0.}, 0.2]}}, 
+      {GrayLevel[1], 
+       {Specularity[
+         GrayLevel[1], 100], 
+        SphereBox[{0.5328369565823847, 0.7748757822689665, 0.}, 0.2]}}, 
+      {GrayLevel[1], 
+       {Specularity[
+         GrayLevel[1], 100], 
+        SphereBox[{0.5328369565823847, -0.7748757822689665, 0.}, 0.2]}}}, {
+      {EdgeForm[None], 
+       {GrayLevel[1], 
+        {Specularity[
+          GrayLevel[1], 100], 
+         CylinderBox[{{0.5328369565823847, 0.7748757822689665, 0.}, {
+          0.3308052541710166, 0.5139482229334983, 0.}}, 0.2]}}, 
+       {RGBColor[1, 0, 0], 
+        {Specularity[
+          GrayLevel[1], 100], 
+         CylinderBox[{{-0.06713597785137554, 0., 0.}, {0.33080525417101647`, 
+          0.5139482229334982, 0.}}, 0.2]}}}, 
+      {EdgeForm[None], 
+       {GrayLevel[1], 
+        {Specularity[
+          GrayLevel[1], 100], 
+         CylinderBox[{{0.5328369565823847, -0.7748757822689665, 0.}, {
+          0.3308052541710166, -0.5139482229334983, 0.}}, 0.2]}}, 
+       {RGBColor[1, 0, 0], 
+        {Specularity[
+          GrayLevel[1], 100], 
+         CylinderBox[{{-0.06713597785137554, 0., 0.}, {
+          0.33080525417101647`, -0.5139482229334982, 0.}}, 0.2]}}}}}, {{
+    6.123233995736766*^-17, 1., 0.}, {-1., 6.123233995736766*^-17, 0.}, {0., 
+    0., 1.}}], {{1., 0., 0.}, {0., 6.123233995736766*^-17, 1.}, {0., -1., 
+   6.123233995736766*^-17}}],
+  Boxed->False,
+  ImageSize->Small,
+  Lighting->"Neutral",
+  ViewAngle->0.33234063777398115`,
+  ViewPoint->{-0.501433503876591, 2.7034018176080847`, 1.972354697751737},
+  ViewVertical->{0.6552471821007929, 3.5495934807589418`, 
+   0.3916862768379944}]], "Output",
+ CellChangeTimes->{
+  3.668977054917109*^9, {3.668977131716065*^9, 3.66897718719276*^9}, 
+   3.6689775623097754`*^9, 3.668977662099471*^9}]
+}, Open  ]],
+
+Cell["\<\
+This class instance can then get its own center of mass, using a python-style \
+bound method\
+\>", "Text",
+ CellFrame->{{0, 0}, {0, 0}},
+ CellChangeTimes->{{3.668976688076733*^9, 3.668976707746564*^9}, {
+  3.668976775547133*^9, 3.668976796070322*^9}, {3.668976827480466*^9, 
+  3.668977031113151*^9}, {3.6689771726622953`*^9, 3.668977214555256*^9}},
+ FontFamily->"Helvetica",
+ FontSize->14,
+ Background->GrayLevel[1]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"water", "::", "CenterOfMass"}]], "Input",
+ CellChangeTimes->{{3.6689772160686293`*^9, 3.668977219619359*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.06713597785137554`", ",", "0.`", ",", "0.`"}], "}"}]], "Output",
+ CellChangeTimes->{3.668977219986425*^9, 3.6689775662458887`*^9, 
+  3.668977664119824*^9}]
+}, Open  ]],
+
+Cell["or it can tell you whether or not it\[CloseCurlyQuote]s linear", "Text",
+ CellFrame->{{0, 0}, {0, 0}},
+ CellChangeTimes->{{3.668976688076733*^9, 3.668976707746564*^9}, {
+  3.668976775547133*^9, 3.668976796070322*^9}, {3.668976827480466*^9, 
+  3.668977031113151*^9}, {3.6689771726622953`*^9, 3.668977267674008*^9}},
+ FontFamily->"Helvetica",
+ FontSize->14,
+ Background->GrayLevel[1]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"water", "::", "IsLinear"}]], "Input",
+ CellChangeTimes->{{3.668977269823504*^9, 3.6689772733298197`*^9}}],
+
+Cell[BoxData["False"], "Output",
+ CellChangeTimes->{3.6689772739682713`*^9, 3.668977568973352*^9, 
+  3.668977665969654*^9}]
+}, Open  ]],
+
+Cell["and so can tell you about its degrees of freedom", "Text",
+ CellFrame->{{0, 0}, {0, 0}},
+ CellChangeTimes->{{3.668976688076733*^9, 3.668976707746564*^9}, {
+  3.668976775547133*^9, 3.668976796070322*^9}, {3.668976827480466*^9, 
+  3.668977031113151*^9}, {3.6689771726622953`*^9, 3.668977267674008*^9}, {
+  3.668977317784477*^9, 3.668977332120743*^9}},
+ FontFamily->"Helvetica",
+ FontSize->14,
+ Background->GrayLevel[1]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"water", "::", "DegreesOfFreedom"}]], "Input",
+ CellChangeTimes->{{3.6689775275812473`*^9, 3.6689775344181833`*^9}, {
+  3.668977572499737*^9, 3.66897757267404*^9}, {3.668977671760358*^9, 
+  3.668977671942251*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"3", ",", "3", ",", "6"}], "}"}]], "Output",
+ CellChangeTimes->{{3.6689775701565533`*^9, 3.668977573270175*^9}, {
+  3.668977668251133*^9, 3.6689776723139277`*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["2. Mutability", "Subsubsection",
+ CellChangeTimes->{{3.668976811909815*^9, 3.668976815270728*^9}}],
+
+Cell["Mutability is best displayed by my unfinished GUI framework.", "Text",
+ CellFrame->{{0, 0}, {0, 0}},
+ CellChangeTimes->{{3.668976688076733*^9, 3.668976707746564*^9}, {
+  3.668976775547133*^9, 3.668976796070322*^9}, {3.6689781943519363`*^9, 
+  3.668978208597211*^9}},
+ FontFamily->"Helvetica",
+ FontSize->14,
+ Background->GrayLevel[1]]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Testing", "Section",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.667766647497061*^9, {3.6687045276727133`*^9, 3.668704528574724*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Get", "@", 
+   RowBox[{"FileNameJoin", "@", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<DVRWrapper.m\>\""}], 
+     "}"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.668976918364566*^9, 3.668976931413734*^9}, {
+  3.6689783364572773`*^9, 3.668978337912678*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"usage", "::", "shdw"}], "MessageName"], ":", 
+  " ", "\<\"Symbol \[NoBreak]\\!\\(\\*RowBox[{\\\"\\\\\\\"usage\\\\\\\"\\\"}]\
+\\)\[NoBreak] appears in multiple contexts \[NoBreak]\\!\\(\\*RowBox[{\\\"{\\\
+\", RowBox[{\\\"\\\\\\\"ChemPrimitives`\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"DVRWrapper`\\\\\\\"\\\"}], \\\"}\\\"}]\\)\[NoBreak]; definitions \
+in context \
+\[NoBreak]\\!\\(\\*RowBox[{\\\"\\\\\\\"ChemPrimitives`\\\\\\\"\\\"}]\\)\
+\[NoBreak] may shadow or be shadowed by other definitions. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/shdw\\\", \
+ButtonNote -> \\\"ChemPrimitives`usage::shdw\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{{3.669000860087224*^9, 3.6690008660350943`*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"CDVR", "=", 
+   RowBox[{"Cartesian1DDVR", "[", 
+    RowBox[{
+     RowBox[{"{", "250", "}"}], ",", 
+     RowBox[{"Range", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "2.5"}], ",", "2.5"}], "}"}]}], ",", 
+     RowBox[{"ReloadPackage", "\[Rule]", "True"}]}], "]"}]}], ";"}]], "Input",\
+
+ CellChangeTimes->{{3.668979187006343*^9, 3.668979188350267*^9}, {
+  3.668979222709463*^9, 3.6689792289408293`*^9}, {3.668979294089072*^9, 
+  3.6689792942964087`*^9}, {3.6689813947759943`*^9, 3.668981401924378*^9}, {
+  3.6689814538254023`*^9, 3.668981454911283*^9}, {3.668981691487887*^9, 
+  3.668981696506969*^9}, {3.668981872339287*^9, 3.668981875027862*^9}, {
+  3.66899262296896*^9, 3.668992634410254*^9}, {3.668994643405242*^9, 
+  3.66899464447508*^9}, {3.668995804005784*^9, 3.66899580424949*^9}, {
+  3.668996296934195*^9, 3.6689962985079813`*^9}, {3.6689988756196203`*^9, 
+  3.668998876184436*^9}, {3.668999400625772*^9, 3.66899941717311*^9}, {
+  3.669000592429222*^9, 3.6690006183198957`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"CDVR", "::", "RunDVR"}], "[", 
+  RowBox[{
+   RowBox[{"SquareWavefunction", "\[Rule]", "False"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Function", "\[Rule]", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"potential", "[", "#", "]"}], "&"}], ")"}]}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"LabelStyle", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"Background", "->", "White"}], "}"}]}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Manipulate", "\[Rule]", "True"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"Ticks", "\[Rule]", "False"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"Axes", "\[Rule]", "False"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"AxesOrigin", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", 
+      RowBox[{"-", "6.4"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"PlotRange", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"-", "8"}], ",", "4"}], "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<x\>\"", ",", "Italic"}], "]"}], ",", "None"}], "}"}]}], 
+   ",", "\[IndentingNewLine]", 
+   RowBox[{"WavefunctionSelection", "\[Rule]", "10"}]}], "]"}]], "Input",
+ CellChangeTimes->CompressedData["
+1:eJwd0VtIU3EAx/E5jS0v87jE8MJow7AWiIxJiUOplC5SrsI5Q5wLizJqM2Ve
+Zs5qqBRuLCrdIadBUYRYDyvNJhuVjTY0STjCSBlJPmgMb4OmAz2//8OPD/xe
+v+IruotXuRwOJ5cdVLU/F/BUK8cXrPsp2JQ3lgHlUlUm/DgmEsN75bESOL13
+/jz5RUIlPJt1rCyR9eTf08RpT0M55B4uUcKRPYFqOPShWAOjpqkuGGfL74Zd
+hXG9UNmXZoEBceVnmDbSS/Sn8JehfbiCKAsXhaCZ9hKXIqEIfKp3bEGbPrAD
+b5dKOUmsd+SXeLDNLuHDyUWpER6iNu/C7SLHD+hpp32Q6Xy5CtWOg5uw5tST
+CKybydmCwY2VeAHrPsFSEqz26bOgsslMVAeZCrismFJDQ2OPFiYnJtyCVGW2
+Adrr/rdA45D/IXw/qngE83StE3DUGCYaolVeyB24QeT9ionCoxpTTDJ6eS3x
+0Lo6TqzXKGqgJie1Fl6XzLXCN9QCsbttzgx9od9E6x++GwrdAx6ouN+zDh/P
+FGzAazJdJsXq2l4j2hadB+Bao/sIfBYerIJMv/AydHbKDFD+iW6GX2YnZ+Gw
+KZuBpQWxQbh+4jXxnItOT2FN53ZkQMtNmwhqSxIk8OfECzkse/eWOP5AWwj/
+1XYUw4Dr2xnIOL9fgLkNr4yQ9n8l7gIC9UW+
+  "]],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{Cartesian1DDVR`Private`i$$ = 1, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[Cartesian1DDVR`Private`i$$], 1, ""}, 1, 10, 1}}, 
+    Typeset`size$$ = {473., {109., 114.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
+    Cartesian1DDVR`Private`i$47284$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {Cartesian1DDVR`Private`i$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[
+        Cartesian1DDVR`Private`i$$, Cartesian1DDVR`Private`i$47284$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Show[
+        Cartesian1DDVR`Private`wavePlot$47258[
+         Part[{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, Cartesian1DDVR`Private`i$$], 
+         Row[{
+           Subscript["\[Psi]", #], ": E=", 
+           NumberForm[#2, 3]}]& ], {
+         Graphics[{{}, {{{}, {}, {
+              Hue[0.67, 0.6, 0.6], 
+              Directive[
+               PointSize[0.011111111111111112`], 
+               AbsoluteThickness[1.6], 
+               GrayLevel[0.5], 
+               Dashing[{0.01, 0.025, 0.02, 0.025}]], 
+              Line[CompressedData["
+1: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
+               "]]}}}, {}}, {
+          DisplayFunction -> Identity, PlotRangePadding -> {{
+              Scaled[0.02], 
+              Scaled[0.02]}, {
+              Scaled[0.05], 
+              Scaled[0.05]}}, AxesOrigin -> {0, 0}, 
+           PlotRange -> {{-2.5, 2.5}, {-6.249767075915797, 7.8125}}, 
+           DisplayFunction -> Identity, AspectRatio -> GoldenRatio^(-1), 
+           Axes -> {True, True}, AxesLabel -> {None, None}, 
+           AxesOrigin -> {0, 0}, DisplayFunction :> Identity, 
+           Frame -> {{False, False}, {False, False}}, 
+           FrameLabel -> {{None, None}, {None, None}}, 
+           FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
+           GridLines -> {None, None}, GridLinesStyle -> Directive[
+             GrayLevel[0.5, 0.4]], Method -> {}, 
+           PlotRange -> {{-2.5, 2.5}, {-6.249767075915797, 7.8125}}, 
+           PlotRangeClipping -> True, PlotRangePadding -> {{
+              Scaled[0.02], 
+              Scaled[0.02]}, {
+              Scaled[0.05], 
+              Scaled[0.05]}}, Ticks -> {Automatic, Automatic}}], 
+         Cartesian1DDVR`Private`\[Lambda]Plot$47258[{
+          Cartesian1DDVR`Private`i$$}]}, 
+        FilterRules[{{$CellContext`SquareWavefunction -> False, 
+           LabelStyle -> {Background -> GrayLevel[1]}, Manipulate -> True, 
+           Ticks -> False, Axes -> False, AxesOrigin -> {0, -6.4}, 
+           PlotRange -> {-8, 4}, AxesLabel -> {
+             Style["x", Italic], None}, $CellContext`WavefunctionSelection -> 
+           10}, PlotRange -> Automatic}, 
+         Options[Plot]]], 
+      "Specifications" :> {{{Cartesian1DDVR`Private`i$$, 1, ""}, 1, 10, 1}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{518., {153., 158.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Input",
+ CellChangeTimes->{3.669003254238515*^9}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{Cartesian1DDVR`Private`i$$ = 1, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[Cartesian1DDVR`Private`i$$], 1, ""}, 1, 10, 1}}, 
+    Typeset`size$$ = {473., {105., 110.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
+    Cartesian1DDVR`Private`i$42577$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {Cartesian1DDVR`Private`i$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[
+        Cartesian1DDVR`Private`i$$, Cartesian1DDVR`Private`i$42577$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Show[
+        Cartesian1DDVR`Private`wavePlot$42551[
+         Part[{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, Cartesian1DDVR`Private`i$$], 
+         Row[{
+           Subscript["\[Psi]", #], ": E=", 
+           NumberForm[#2, 3]}]& ], {
+         Graphics[{{}, {{{}, {}, {
+              Hue[0.67, 0.6, 0.6], 
+              Directive[
+               PointSize[0.011111111111111112`], 
+               AbsoluteThickness[1.6], 
+               GrayLevel[0.5], 
+               Dashing[{0.01, 0.025, 0.02, 0.025}]], 
+              Line[CompressedData["
+1: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
+               "]]}}}, {}}, {
+          DisplayFunction -> Identity, PlotRangePadding -> {{
+              Scaled[0.02], 
+              Scaled[0.02]}, {
+              Scaled[0.05], 
+              Scaled[0.05]}}, AxesOrigin -> {0, 0}, 
+           PlotRange -> {{-2.5, 2.5}, {-6.249767075915797, 7.8125}}, 
+           DisplayFunction -> Identity, AspectRatio -> GoldenRatio^(-1), 
+           Axes -> {True, True}, AxesLabel -> {None, None}, 
+           AxesOrigin -> {0, 0}, DisplayFunction :> Identity, 
+           Frame -> {{False, False}, {False, False}}, 
+           FrameLabel -> {{None, None}, {None, None}}, 
+           FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
+           GridLines -> {None, None}, GridLinesStyle -> Directive[
+             GrayLevel[0.5, 0.4]], Method -> {}, 
+           PlotRange -> {{-2.5, 2.5}, {-6.249767075915797, 7.8125}}, 
+           PlotRangeClipping -> True, PlotRangePadding -> {{
+              Scaled[0.02], 
+              Scaled[0.02]}, {
+              Scaled[0.05], 
+              Scaled[0.05]}}, Ticks -> {Automatic, Automatic}}], 
+         Cartesian1DDVR`Private`\[Lambda]Plot$42551[{
+          Cartesian1DDVR`Private`i$$}]}, 
+        FilterRules[{{$CellContext`SquareWavefunction -> False, 
+           LabelStyle -> {Background -> GrayLevel[1]}, Manipulate -> True, 
+           Ticks -> False, Axes -> {True, False}, AxesOrigin -> {0, -6.4}, 
+           PlotRange -> {-8, 4}, AxesLabel -> {
+             Style["x", Italic], None}, $CellContext`WavefunctionSelection -> 
+           10}, PlotRange -> Automatic}, 
+         Options[Plot]]], 
+      "Specifications" :> {{{Cartesian1DDVR`Private`i$$, 1, ""}, 1, 10, 1}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{518., {149., 154.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Input",
+ CellChangeTimes->{3.6690029077519293`*^9}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{Cartesian1DDVR`Private`i$$ = 1, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[Cartesian1DDVR`Private`i$$], 1, ""}, 1, 10, 1}}, 
+    Typeset`size$$ = {473., {112., 116.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
+    Cartesian1DDVR`Private`i$39217$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {Cartesian1DDVR`Private`i$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[
+        Cartesian1DDVR`Private`i$$, Cartesian1DDVR`Private`i$39217$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Show[
+        Cartesian1DDVR`Private`wavePlot$39192[
+         Part[{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, Cartesian1DDVR`Private`i$$], 
+         Row[{
+           Subscript["\[Psi]", #], ": E=", 
+           NumberForm[#2, 3]}]& ], {
+         Graphics[{{}, {{{}, {}, {
+              Hue[0.67, 0.6, 0.6], 
+              Directive[
+               PointSize[0.011111111111111112`], 
+               AbsoluteThickness[1.6], 
+               GrayLevel[0.5], 
+               Dashing[{0.01, 0.025, 0.02, 0.025}]], 
+              Line[CompressedData["
+1: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
+               "]]}}}, {}}, {
+          DisplayFunction -> Identity, PlotRangePadding -> {{
+              Scaled[0.02], 
+              Scaled[0.02]}, {
+              Scaled[0.05], 
+              Scaled[0.05]}}, AxesOrigin -> {0, 0}, 
+           PlotRange -> {{-2.5, 2.5}, {-6.249767075915797, 7.8125}}, 
+           DisplayFunction -> Identity, AspectRatio -> GoldenRatio^(-1), 
+           Axes -> {True, True}, AxesLabel -> {None, None}, 
+           AxesOrigin -> {0, 0}, DisplayFunction :> Identity, 
+           Frame -> {{False, False}, {False, False}}, 
+           FrameLabel -> {{None, None}, {None, None}}, 
+           FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
+           GridLines -> {None, None}, GridLinesStyle -> Directive[
+             GrayLevel[0.5, 0.4]], Method -> {}, 
+           PlotRange -> {{-2.5, 2.5}, {-6.249767075915797, 7.8125}}, 
+           PlotRangeClipping -> True, PlotRangePadding -> {{
+              Scaled[0.02], 
+              Scaled[0.02]}, {
+              Scaled[0.05], 
+              Scaled[0.05]}}, Ticks -> {Automatic, Automatic}}], 
+         Cartesian1DDVR`Private`\[Lambda]Plot$39192[{
+          Cartesian1DDVR`Private`i$$}]}, 
+        FilterRules[{{$CellContext`SquareWavefunction -> False, 
+           LabelStyle -> {Background -> GrayLevel[1]}, Manipulate -> True, 
+           PlotRange -> {-8, 4}, AxesLabel -> {
+             Style["x", Italic], None}, $CellContext`WavefunctionSelection -> 
+           10}, PlotRange -> Automatic}, 
+         Options[Plot]]], 
+      "Specifications" :> {{{Cartesian1DDVR`Private`i$$, 1, ""}, 1, 10, 1}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{518., {156., 161.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Input",
+ CellChangeTimes->{3.6690028182082167`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"potential", "[", 
+   RowBox[{"pos_", ",", 
+    RowBox[{"n_:", "3"}]}], "]"}], ":=", "\[IndentingNewLine]", 
+  RowBox[{"(", 
+   RowBox[{
+    SuperscriptBox["pos", "4"], "-", 
+    RowBox[{"5", 
+     SuperscriptBox["pos", "2"]}]}], ")"}]}]], "Input",
+ CellChangeTimes->{{3.668997114489245*^9, 3.668997218847629*^9}, {
+   3.66899808283291*^9, 3.6689981087655163`*^9}, {3.6689981952765913`*^9, 
+   3.668998195466745*^9}, {3.668998892571329*^9, 3.668998894080834*^9}, {
+   3.668998953626102*^9, 3.668998959519863*^9}, {3.668998990286044*^9, 
+   3.6689990095880547`*^9}, {3.6689990570687447`*^9, 3.668999221097863*^9}, {
+   3.668999253709366*^9, 3.66899927584861*^9}, {3.668999314733386*^9, 
+   3.668999374321231*^9}, 3.668999421166979*^9, {3.668999466187808*^9, 
+   3.668999521285987*^9}, {3.668999552655995*^9, 3.668999605439329*^9}, {
+   3.668999636199795*^9, 3.668999661521406*^9}, {3.668999755581345*^9, 
+   3.668999897406473*^9}, {3.668999961274775*^9, 3.669000031611665*^9}, {
+   3.669000062967285*^9, 3.6690000666493063`*^9}, {3.6690001031982403`*^9, 
+   3.669000194341797*^9}, {3.669000244569175*^9, 3.669000289790134*^9}, {
+   3.66900033473288*^9, 3.669000405490575*^9}, {3.66900046777344*^9, 
+   3.669000491820775*^9}, {3.6690008832473373`*^9, 3.6690010386357307`*^9}, {
+   3.6690010771203737`*^9, 3.669001127537305*^9}, {3.669001158695676*^9, 
+   3.669001329932021*^9}, {3.6690013645288267`*^9, 3.669001684701294*^9}, {
+   3.669001715620776*^9, 3.6690017317227573`*^9}, {3.669001769180839*^9, 
+   3.669001823710455*^9}, {3.669001857084186*^9, 3.669001880614205*^9}, {
+   3.6690019693987513`*^9, 3.669002023610148*^9}, {3.669002068041823*^9, 
+   3.669002171351839*^9}, {3.669002283357442*^9, 3.669002591911744*^9}, {
+   3.66900263202426*^9, 3.669002682773055*^9}}]
+}, Open  ]]
+},
+WindowSize->{808, 715},
+WindowMargins->{{32, Automatic}, {Automatic, 69}},
+FrontEndVersion->"10.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 10, \
+2015)",
+StyleDefinitions->FrontEnd`FileName[{
+   ParentDirectory[]}, "Interface Stylesheet.nb", CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[422, 15, 281, 6, 76, "Section"],
+Cell[706, 23, 452, 11, 37, "Input",
+ InitializationCell->True]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1195, 39, 173, 4, 62, "Section"],
+Cell[CellGroupData[{
+Cell[1393, 47, 108, 1, 48, "Subsection"],
+Cell[1504, 50, 349, 6, 65, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1890, 61, 115, 1, 48, "Subsection"],
+Cell[2008, 64, 137, 1, 47, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2182, 70, 118, 1, 48, "Subsection"],
+Cell[CellGroupData[{
+Cell[2325, 75, 103, 1, 46, "Subsubsection"],
+Cell[2431, 78, 336, 6, 65, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2804, 89, 99, 1, 46, "Subsubsection"],
+Cell[2906, 92, 363, 6, 65, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[3306, 103, 105, 1, 46, "Subsubsection"],
+Cell[3414, 106, 351, 6, 65, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[3802, 117, 104, 1, 46, "Subsubsection"],
+Cell[3909, 120, 302, 6, 83, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[4248, 131, 156, 2, 46, "Subsubsection"],
+Cell[4407, 135, 153, 3, 47, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[4597, 143, 102, 1, 46, "Subsubsection"],
+Cell[4702, 146, 158, 3, 47, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[4897, 154, 104, 1, 46, "Subsubsection"],
+Cell[5004, 157, 141, 1, 47, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[5182, 163, 113, 1, 46, "Subsubsection"],
+Cell[5298, 166, 165, 3, 47, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[5500, 174, 109, 1, 46, "Subsubsection"],
+Cell[5612, 177, 168, 3, 47, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[5817, 185, 103, 1, 46, "Subsubsection"],
+Cell[5923, 188, 203, 4, 65, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[6163, 197, 106, 1, 46, "Subsubsection"],
+Cell[6272, 200, 161, 3, 47, "Text"]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[6482, 209, 108, 1, 48, "Subsection"],
+Cell[6593, 212, 105, 1, 46, "Subsubsection"],
+Cell[6701, 215, 107, 1, 46, "Subsubsection"],
+Cell[6811, 218, 97, 1, 46, "Subsubsection"],
+Cell[6911, 221, 103, 1, 46, "Subsubsection"],
+Cell[7017, 224, 103, 1, 46, "Subsubsection"]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7169, 231, 167, 4, 76, "Section"],
+Cell[7339, 237, 326, 9, 29, "Text"],
+Cell[CellGroupData[{
+Cell[7690, 250, 111, 1, 46, "Subsubsection"],
+Cell[7804, 253, 518, 11, 65, "Text"],
+Cell[8325, 266, 294, 8, 37, "Input"],
+Cell[8622, 276, 538, 12, 65, "Text"],
+Cell[CellGroupData[{
+Cell[9185, 292, 483, 12, 55, "Input"],
+Cell[9671, 306, 1986, 47, 207, "Output"]
+}, Open  ]],
+Cell[11672, 356, 426, 10, 29, "Text"],
+Cell[CellGroupData[{
+Cell[12123, 370, 133, 2, 37, "Input"],
+Cell[12259, 374, 197, 4, 40, "Output"]
+}, Open  ]],
+Cell[12471, 381, 388, 7, 29, "Text"],
+Cell[CellGroupData[{
+Cell[12884, 392, 129, 2, 37, "Input"],
+Cell[13016, 396, 123, 2, 40, "Output"]
+}, Open  ]],
+Cell[13154, 401, 423, 8, 29, "Text"],
+Cell[CellGroupData[{
+Cell[13602, 413, 236, 4, 37, "Input"],
+Cell[13841, 419, 202, 4, 40, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14092, 429, 104, 1, 46, "Subsubsection"],
+Cell[14199, 432, 340, 7, 29, "Text"]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[14588, 445, 169, 4, 62, "Section"],
+Cell[CellGroupData[{
+Cell[14782, 453, 340, 9, 37, "Input"],
+Cell[15125, 464, 839, 14, 42, "Message"]
+}, Open  ]],
+Cell[15979, 481, 1044, 21, 37, "Input"],
+Cell[17026, 504, 2003, 46, 191, "Input"],
+Cell[19032, 552, 7281, 135, 328, "Input"],
+Cell[26316, 689, 7291, 135, 329, "Input"],
+Cell[33610, 826, 7215, 134, 343, "Input"],
+Cell[40828, 962, 1803, 30, 60, "Input"]
+}, Open  ]]
+}
+]
+*)
+

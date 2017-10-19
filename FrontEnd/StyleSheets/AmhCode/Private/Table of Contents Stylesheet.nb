@@ -1,0 +1,295 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9004,        286]
+NotebookOptionsPosition[      6665,        227]
+NotebookOutlinePosition[      7023,        243]
+CellTagsIndexPosition[      6980,        240]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[StyleData[StyleDefinitions -> FrontEnd`FileName[{"Book"}, "Textbook.nb", 
+  CharacterEncoding -> "UTF-8"]],
+ FontFamily->"Times",
+ FontSize->12,
+ FontWeight->"Plain",
+ FontSlant->"Plain"],
+
+Cell[CellGroupData[{
+
+Cell[StyleData[All],
+ PrintingOptions->{"EmbedExternalFonts"->True,
+ "EmbedStandardPostScriptFonts"->True,
+ "FacingPages"->True,
+ "FirstPageFace"->Right,
+ "FirstPageFooter"->True,
+ "FirstPageHeader"->False,
+ "GraphicsPrintingFormat"->Automatic,
+ "IncludePostScriptResourceDirectives"->True,
+ "IncludeSpecialFonts"->True,
+ "InnerOuterMargins"->{Automatic, Automatic},
+ "Magnification"->1.,
+ "OpacityRenderingMethod"->RenderFeatures,
+ "PageFooterMargins"->{Automatic, Automatic},
+ "PageHeaderMargins"->{Automatic, Automatic},
+ "PageSize"->{Automatic, Automatic},
+ "PaperOrientation"->Portrait,
+ "PaperSize"->{Automatic, Automatic},
+ "PostScriptOutputFile"->Automatic,
+ "PrintCellBrackets"->False,
+ "PrintMultipleHorizontalPages"->False,
+ "PrintRegistrationMarks"->False,
+ "PrintSelectionHighlighting"->False,
+ "PrintingMargins"->{{54, 54}, {72, 72}},
+ "RasterizationResolution"->Automatic,
+ "RestPagesFooter"->True,
+ "RestPagesHeader"->False,
+ "UnixShellPrintingCommand"->Automatic,
+ "UsePostScriptOutputFile"->False,
+ "UseUnixShellPrintingCommand"->False,
+ "VertexColorRenderingMethod"->RenderFeatures},
+ CellFrame->{{0, 0}, {0, 0}},
+ FontFamily->"Times",
+ FontWeight->"Plain",
+ FontSlant->"Plain",
+ PageWidgth -> PaperWidth],
+
+Cell[StyleData[All, "Printout"],
+ FontFamily->"Times",
+ FontWeight->"Plain",
+ FontSlant->"Plain",
+ PageWidgth -> PaperWidth]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["Title"],
+ CellGrouping->None,
+ CellFrame->{{0, 0}, {0, 0}},
+ CellMargins->{{15, 100}, {0, 5}},
+ CellFrameLabels->{{None, None}, {None, None}},
+ TextAlignment->Center,
+ CounterAssignments->({{"Subsection", 0}, {"Subsubsection", 0}, {"Item", 0}, {
+     "Subitem", 0}, {"Subsubitem", 0}, {"ItemNumbered", 0}, {
+     "SubitemNumbered", 0}, {"SubsubitemNumbered", 0}, {"Theorem", 0}} 
+   FontColor -> GrayLevel[0]),
+ FontSize->20],
+
+Cell[StyleData["Title", "Printout"],
+ CellFrame->{{0, 0}, {0, 0}},
+ CellMargins->{{15, 100}, {0, 5}},
+ CellFrameLabels->{{None, None}, {None, None}},
+ TextAlignment->Center,
+ CounterAssignments->({{"Subsection", 0}, {"Subsubsection", 0}, {"Item", 0}, {
+     "Subitem", 0}, {"Subsubitem", 0}, {"ItemNumbered", 0}, {
+     "SubitemNumbered", 0}, {"SubsubitemNumbered", 0}, {"Theorem", 0}} 
+   FontColor -> GrayLevel[0]),
+ FontSize->20]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["Chapter"],
+ CellFrame->{{0, 0}, {0, 0}},
+ CellMargins->{{35, 100}, {0, 5}},
+ FontSize->18,
+ FontColor->GrayLevel[0.1]],
+
+Cell[StyleData["Chapter", "Printout"],
+ CellFrame->{{0, 0}, {0, 0}},
+ CellMargins->{{35, 100}, {0, 5}},
+ FontSize->18,
+ FontColor->GrayLevel[0.1]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["Subchapter"],
+ CellFrame->{{0, 0}, {0, 0}},
+ CellDingbat->None,
+ CellMargins->{{50, 100}, {0, 5}},
+ FontSize->18,
+ FontColor->GrayLevel[0.2]],
+
+Cell[StyleData["Subchapter", "Printout"],
+ CellFrame->{{0, 0}, {0, 0}},
+ CellDingbat->None,
+ CellMargins->{{50, 100}, {0, 5}},
+ FontSize->18,
+ FontColor->GrayLevel[0.2]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["Section"],
+ CellFrame->{{0, 0}, {0, 0}},
+ CellDingbat->"\[LongDash]",
+ CellMargins->{{75, 100}, {0, 5}},
+ FontSize->16,
+ FontColor->GrayLevel[0.3]],
+
+Cell[StyleData["Section", "Printout"],
+ CellFrame->{{0, 0}, {0, 0}},
+ CellDingbat->"\[LongDash]",
+ CellMargins->{{75, 100}, {0, 5}},
+ FontSize->16,
+ FontColor->GrayLevel[0.3]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["Subsection"],
+ CellFrame->{{0, 0}, {0, 0}},
+ CellDingbat->"--",
+ CellMargins->{{100, 100}, {0, 5}},
+ FontSize->14,
+ FontColor->GrayLevel[0.3]],
+
+Cell[StyleData["Subsection", "Printout"],
+ CellFrame->{{0, 0}, {0, 0}},
+ CellDingbat->"--",
+ CellMargins->{{100, 100}, {0, 5}},
+ FontSize->14,
+ FontColor->GrayLevel[0.3]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["Subsubsection"],
+ CellFrame->{{0, 0}, {0, 0}},
+ CellDingbat->"---",
+ CellMargins->{{115, 100}, {0, 5}},
+ FontSize->12,
+ FontColor->GrayLevel[0.35]],
+
+Cell[StyleData["Subsubsection", "Printout"],
+ CellFrame->{{0, 0}, {0, 0}},
+ CellDingbat->"---",
+ CellMargins->{{115, 100}, {0, 5}},
+ FontSize->12,
+ FontColor->GrayLevel[0.35]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["Text"],
+ CellFrame->{{0.5, 0}, {0, 0}},
+ CellDingbat->
+  "\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\
+\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\
+\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\
+\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash] \
+\[CenterDot] \[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\
+\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\
+\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\
+\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]",
+ CellMargins->{{600, 100}, {5, 3}},
+ TextAlignment->Left,
+ FontSize->12],
+
+Cell[StyleData["Text", "Printout"],
+ CellFrame->{{0.5, 0}, {0, 0}},
+ CellDingbat->
+  "\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\
+\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\
+\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash] \
+\[CenterDot] \[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\
+\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\
+\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\[Dash]\
+\[Dash]",
+ CellMargins->{{500, 100}, {5, 3}},
+ TextAlignment->Left,
+ FontSize->12]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["FigureCaption", StyleDefinitions -> StyleData["Section"]],
+ CellDingbat->StyleBox[
+   RowBox[{"Fig ", 
+     CounterBox["FigureCaption"], ":"}], FontSize -> 12],
+ CounterIncrements->"FigureCaption",
+ FontSize->14],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.671451733463105*^9, 3.671451812074065*^9}}]
+}, Open  ]]
+},
+WindowSize->{808, 755},
+WindowMargins->{{Automatic, 143}, {Automatic, 0}},
+FrontEndVersion->"10.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 10, \
+2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 192, 5, 36, 112, 1, "StyleData", "StyleDefinitions", ""],
+Cell[CellGroupData[{
+Cell[775, 29, 1224, 35, 36, 20, 0, "StyleData", "All", "All"],
+Cell[2002, 66, 124, 4, 30, 32, 0, "StyleData", "All", "Printout"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2163, 75, 441, 10, 41, 24, 0, "StyleData", "Title", "All",
+ CounterAssignments->({{"Subsection", 0}, {"Subsubsection", 0}, {"Item", 0}, {
+     "Subitem", 0}, {"Subsubitem", 0}, {"ItemNumbered", 0}, {
+     "SubitemNumbered", 0}, {"SubsubitemNumbered", 0}, {"Theorem", 0}} 
+   FontColor -> GrayLevel[0])],
+Cell[2607, 87, 432, 9, 41, 36, 0, "StyleData", "Title", "Printout",
+ CounterAssignments->({{"Subsection", 0}, {"Subsubsection", 0}, {"Item", 0}, {
+     "Subitem", 0}, {"Subsubitem", 0}, {"ItemNumbered", 0}, {
+     "SubitemNumbered", 0}, {"SubsubitemNumbered", 0}, {"Theorem", 0}} 
+   FontColor -> GrayLevel[0])]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3076, 101, 134, 4, 39, 26, 0, "StyleData", "Chapter", "All"],
+Cell[3213, 107, 146, 4, 39, 38, 0, "StyleData", "Chapter", "Printout"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3396, 116, 157, 5, 39, 29, 0, "StyleData", "Subchapter", "All"],
+Cell[3556, 123, 169, 5, 39, 41, 0, "StyleData", "Subchapter", "Printout"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3762, 133, 163, 5, 47, 26, 0, "StyleData", "Section", "All"],
+Cell[3928, 140, 175, 5, 37, 38, 0, "StyleData", "Section", "Printout"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4140, 150, 158, 5, 35, 29, 0, "StyleData", "Subsection", "All"],
+Cell[4301, 157, 170, 5, 35, 41, 0, "StyleData", "Subsection", "Printout"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4508, 167, 163, 5, 33, 32, 0, "StyleData", "Subsubsection", "All"],
+Cell[4674, 174, 175, 5, 33, 44, 0, "StyleData", "Subsubsection", "Printout"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4886, 184, 765, 13, 36, 23, 0, "StyleData", "Text", "All"],
+Cell[5654, 199, 635, 12, 36, 35, 0, "StyleData", "Text", "Printout"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6326, 216, 228, 5, 45, 74, 0, "StyleData", "FigureCaption", "All",
+ CounterIncrements->"FigureCaption"],
+Cell[6557, 223, 92, 1, 28, "Input"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

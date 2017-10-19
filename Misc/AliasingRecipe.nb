@@ -1,0 +1,258 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9430,        249]
+NotebookOptionsPosition[      9134,        234]
+NotebookOutlinePosition[      9491,        250]
+CellTagsIndexPosition[      9448,        247]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"resetAliases", "[", "]"}], ":=", 
+   RowBox[{"SetOptions", "[", 
+    RowBox[{
+     RowBox[{"EvaluationNotebook", "[", "]"}], ",", 
+     RowBox[{"InputAliases", "\[Rule]", 
+      RowBox[{"{", "}"}]}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"addAlias", "[", 
+   RowBox[{"alias_", ",", "arg_"}], "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"SetOptions", "[", 
+      RowBox[{
+       RowBox[{"EvaluationNotebook", "[", "]"}], ",", 
+       RowBox[{"InputAliases", "\[Rule]", 
+        RowBox[{"Join", "[", 
+         RowBox[{
+          RowBox[{"InputAliases", "/.", 
+           RowBox[{"Options", "[", 
+            RowBox[{
+             RowBox[{"EvaluationNotebook", "[", "]"}], ",", "InputAliases"}], 
+            "]"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"alias", "\[Rule]", "arg"}], "}"}]}], "]"}]}]}], "]"}], 
+     ";"}]}], "\[IndentingNewLine]", "]"}]}]}], "Input",
+ CellChangeTimes->{
+  3.640034750983869*^9, {3.6400348186039133`*^9, 3.6400348207063837`*^9}, {
+   3.640034869387785*^9, 3.6400348897066183`*^9}, {3.6400350506351767`*^9, 
+   3.64003506286874*^9}, {3.640035101962476*^9, 3.640035105186967*^9}, {
+   3.640035757931229*^9, 3.640035803264662*^9}, {3.640036473333457*^9, 
+   3.6400364963035383`*^9}, {3.640036557517166*^9, 3.64003663379965*^9}, {
+   3.6400366773323174`*^9, 3.640036681658045*^9}, {3.640040113260667*^9, 
+   3.640040142079392*^9}, 3.6400438417402077`*^9, {3.640055498201877*^9, 
+   3.640055498675651*^9}, 3.6519891249992313`*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"aliasAt", "[", "n_", "]"}], ":=", 
+   RowBox[{"Module", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+       "letters", "=", 
+        "\"\<ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz\>\""}], ",", 
+       RowBox[{"baseStyle", "=", "\"\<Arial\>\""}], ",", 
+       "\[IndentingNewLine]", "l", ",", "al", ",", "ar"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"l", "=", 
+       RowBox[{"StringTake", "[", 
+        RowBox[{"letters", ",", 
+         RowBox[{"{", "n", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"al", "=", 
+       RowBox[{"\"\<fr\>\"", "<>", "l"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"ar", "=", 
+       RowBox[{"RowBox", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"StyleBox", "[", 
+           RowBox[{"l", ",", 
+            RowBox[{"FontFamily", "\[Rule]", "\"\<Alte Schwabacher\>\""}]}], 
+           "]"}], ",", 
+          RowBox[{"StyleBox", "[", 
+           RowBox[{"\"\< \>\"", ",", 
+            RowBox[{"FontFamily", "\[Rule]", "baseStyle"}]}], "]"}]}], "}"}], 
+        "]"}]}], " ", ";", "\[IndentingNewLine]", 
+      RowBox[{"addAlias", "[", 
+       RowBox[{"al", ",", "ar"}], "]"}], ";"}]}], "\[IndentingNewLine]", 
+    "]"}]}], "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"timesAlias", "[", "n_", "]"}], ":=", 
+   RowBox[{"Module", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+       "letters", "=", 
+        "\"\<ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz\>\""}], ",", 
+       RowBox[{"baseStyle", "=", "\"\<Arial\>\""}], ",", 
+       "\[IndentingNewLine]", "l", ",", "al", ",", "ar"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"l", "=", 
+       RowBox[{"StringTake", "[", 
+        RowBox[{"letters", ",", 
+         RowBox[{"{", "n", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"al", "=", 
+       RowBox[{"\"\<ti\>\"", "<>", "l"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"ar", "=", 
+       RowBox[{"RowBox", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"StyleBox", "[", 
+           RowBox[{"l", ",", 
+            RowBox[{"FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}]}], 
+           "]"}], ",", 
+          RowBox[{"StyleBox", "[", 
+           RowBox[{"\"\< \>\"", ",", 
+            RowBox[{"FontFamily", "\[Rule]", "baseStyle"}]}], "]"}]}], "}"}], 
+        "]"}]}], " ", ";", "\[IndentingNewLine]", 
+      RowBox[{"addAlias", "[", 
+       RowBox[{"al", ",", "ar"}], "]"}], ";"}]}], "\[IndentingNewLine]", 
+    "]"}]}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"universeAlias", "[", "n_", "]"}], ":=", 
+   RowBox[{"Module", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+       "letters", "=", 
+        "\"\<ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz\>\""}], ",", 
+       RowBox[{"baseStyle", "=", "\"\<Arial\>\""}], ",", 
+       "\[IndentingNewLine]", "l", ",", "al", ",", "ar"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"l", "=", 
+       RowBox[{"StringTake", "[", 
+        RowBox[{"letters", ",", 
+         RowBox[{"{", "n", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"al", "=", 
+       RowBox[{"\"\<un\>\"", "<>", "l"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"ar", "=", 
+       RowBox[{"RowBox", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"StyleBox", "[", 
+           RowBox[{"\"\<\[LeftBracketingBar]\>\"", ",", 
+            RowBox[{"FontFamily", "\[Rule]", "baseStyle"}]}], "]"}], ",", 
+          RowBox[{"StyleBox", "[", 
+           RowBox[{"l", ",", 
+            RowBox[{"FontFamily", "\[Rule]", "\"\<Alte Schwabacher\>\""}]}], 
+           "]"}], ",", 
+          RowBox[{"StyleBox", "[", 
+           RowBox[{"\"\<\[RightBracketingBar]\>\"", ",", 
+            RowBox[{"FontFamily", "\[Rule]", "baseStyle"}]}], "]"}]}], "}"}], 
+        "]"}]}], " ", ";", "\[IndentingNewLine]", 
+      RowBox[{"addAlias", "[", 
+       RowBox[{"al", ",", "ar"}], "]"}], ";"}]}], "\[IndentingNewLine]", 
+    "]"}]}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"resetStyleAlias", "[", "]"}], "=", 
+   RowBox[{"Module", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"baseStyle", "=", "\"\<Arial\>\""}], ",", "al", ",", "ar"}], 
+      "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"al", "=", "\"\< r\>\""}], ";", "\[IndentingNewLine]", 
+      RowBox[{"ar", "=", 
+       RowBox[{"StyleBox", "[", 
+        RowBox[{"\"\< \>\"", ",", 
+         RowBox[{"FontFamily", "\[Rule]", "baseStyle"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"addAlias", "[", 
+       RowBox[{"al", ",", "ar"}], "]"}], ";"}]}], "\[IndentingNewLine]", 
+    "]"}]}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"resetAliases", "[", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Module", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"i", "=", "0"}], "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"For", "[", 
+     RowBox[{
+      RowBox[{"i", "=", "1"}], ",", 
+      RowBox[{"i", "\[LessEqual]", 
+       RowBox[{"26", "*", "2"}]}], ",", 
+      RowBox[{"i", "++"}], ",", 
+      RowBox[{
+       RowBox[{"timesAlias", "[", "i", "]"}], ";", 
+       RowBox[{"aliasAt", "[", "i", "]"}], ";", 
+       RowBox[{"universeAlias", "[", "i", "]"}]}]}], "]"}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"addAlias", "[", 
+     RowBox[{"\"\<drT\>\"", ",", "\"\<\[DoubleRightTee]\>\""}], "]"}], 
+    ";"}]}], "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"addAlias", "[", 
+  RowBox[{
+  "\"\<rl\>\"", ",", "\"\<\[LeftBracketingBar]\[RightBracketingBar]\>\""}], 
+  "]"}], "\n", 
+ RowBox[{"addAlias", "[", 
+  RowBox[{"\"\<sat\>\"", ",", "\"\<\!\(\*SubscriptBox[\"\[DoubleRightTee]\", 
+RowBox[{
+StyleBox[\"A\",
+FontFamily->\"Alte Schwabacher\"], 
+StyleBox[\" \",
+FontFamily->\"Arial\"]}]]\)\[Placeholder][s]\>\""}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"addAlias", "[", 
+  RowBox[{
+  "\"\<eT\>\"", ",", "\"\<\!\(\*SubscriptBox[\(\[RightTee]\), \(e\)]\)\>\""}],
+   "]"}]}], "Input",
+ CellChangeTimes->{
+  3.640034750983869*^9, {3.6400348186039133`*^9, 3.6400348207063837`*^9}, {
+   3.640034869387785*^9, 3.6400348897066183`*^9}, {3.6400350506351767`*^9, 
+   3.64003506286874*^9}, {3.640035101962476*^9, 3.640035105186967*^9}, {
+   3.640035757931229*^9, 3.640035803264662*^9}, {3.640036473333457*^9, 
+   3.6400364963035383`*^9}, {3.640036557517166*^9, 3.64003663379965*^9}, {
+   3.6400366773323174`*^9, 3.640036681658045*^9}, {3.640040113260667*^9, 
+   3.640040142079392*^9}, 3.6400438417402077`*^9, {3.640055498201877*^9, 
+   3.640055498675651*^9}, 3.6519891249992313`*^9}]
+},
+WindowSize->{808, 756},
+WindowMargins->{{12, Automatic}, {Automatic, 24}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1650, 38, 114, "Input"],
+Cell[2211, 60, 6919, 172, 811, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
